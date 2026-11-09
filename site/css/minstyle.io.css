@@ -3218,7 +3218,7 @@ template {
 
 /* VARIABLES */
 html {
-	--default-bg: #EAF4FF;
+	--default-bg: #C7DFFF;
 	--default-font-color: rgba(0, 0, 0, 0.85); }
 
 html[data-theme='dark'] {

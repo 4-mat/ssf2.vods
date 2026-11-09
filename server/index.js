@@ -112,7 +112,7 @@ Server.prototype.setupRoutes = function() {
 	this.app.get("/provisional", async (req, res) => {
 		let auth = this.authCheck(req);
 		if(!auth || !this.approveCheck(auth, req)) {
-			res.status(400).send("No!");
+			return res.status(403).send("No!");
 		}
 		res.send(this.templateManager.renderTemplate("provisional.html"));
 	});
@@ -120,7 +120,7 @@ Server.prototype.setupRoutes = function() {
 	this.app.post("/approveVideo", async (req, res) => {
 		let auth = this.authCheck(req);
 		if(!auth || !this.approveCheck(auth, req)) {
-			res.status(400).send("No!");
+			return res.status(403).send("No!");
 		}
 		let ip = req.connection.remoteAddress;
 
@@ -142,7 +142,7 @@ Server.prototype.setupRoutes = function() {
 	this.app.post("/deleteProvVideo", async (req, res) => {
 		let auth = this.authCheck(req);
 		if(!auth || !this.approveCheck(auth, req)) {
-			res.status(400).send("No!");
+			return res.status(403).send("No!");
 		}
 		let ip = req.connection.remoteAddress;
 

@@ -4,6 +4,22 @@ function MatchManger(server) {
 	this.server = server;
 }
 
+MatchManger.prototype.isRestrictedContributor = function(auth) {
+	if(!auth) return false;
+	let contributor = this.server.cfg.contributors.find(user => user.name === auth);
+	return !!(contributor && contributor.noApprove);
+};
+
+MatchManger.prototype.canManageVideo = function(video, ip, auth) {
+	if(!auth) {
+		return !!(video.provIP && video.provIP === ip);
+	}
+	if(this.isRestrictedContributor(auth)) {
+		return video.restrictedOwner === auth;
+	}
+	return true;
+};
+
 MatchManger.prototype.validateAddEditVideoForm = function(form) {
 	if(!form || Object.keys(form) === 0) {
 		return "Nothing passed in.";
@@ -61,12 +77,12 @@ MatchManger.prototype.editVideo = function(form, ip, auth) {
 		videoData.date = form.date;
 		videoData.netplay = form.netplay;
 		videoData.tags = form.tags;
-		videoData.provIP = auth ? null : ip;
+		let restricted = this.isRestrictedContributor(auth);
+		videoData.provIP = (!auth || restricted) ? ip : null;
+		if(restricted) videoData.restrictedOwner = auth;
 		videoData.matches = [];
-	} else if(!videoData.provIP && !auth) {
-		return "Not authorised to edit a non-provisional video.";
-	} else if(!auth && videoData.provIP && videoData.provIP !== ip) {
-		return "This provisional video was added by someone else.";
+	} else if(!this.canManageVideo(videoData, ip, auth)) {
+		return "Not authorised to edit this video.";
 	}
 
 	this.editVideoSpecificFields(videoData, form, ip, auth);
@@ -97,12 +113,12 @@ MatchManger.prototype.addMatch = function(form, ip, auth) {
 		videoData.date = form.date;
 		videoData.netplay = form.netplay;
 		videoData.tags = form.tags;
-		videoData.provIP = auth ? null : ip;
+		let restricted = this.isRestrictedContributor(auth);
+		videoData.provIP = (!auth || restricted) ? ip : null;
+		if(restricted) videoData.restrictedOwner = auth;
 		videoData.matches = [];
-	} else if(!videoData.provIP && !auth) {
-		return "Not authorised to add a match to a non-provisional video.";
-	} else if(!auth && videoData.provIP && videoData.provIP !== ip) {
-		return "This provisional video was added by someone else.";
+	} else if(!this.canManageVideo(videoData, ip, auth)) {
+		return "Not authorised to add a match to this video.";
 	}
 
 	this.editVideoSpecificFields(videoData, form, ip, auth);
@@ -147,17 +163,18 @@ MatchManger.prototype.editMatch = function(form, ip, auth) {
 	if(error) return error;
 
 	let videoData = this.server.games[form.vid];
-	if(!videoData.provIP && !auth) {
-		return "Not authorised to edit a match on a non-provisional video.";
-	} else if(!auth && videoData.provIP && videoData.provIP !== ip) {
-		return "This provisional video was added by someone else.";
+	if(!videoData) {
+		return "Invalid video ID.";
+	}
+	if(!this.canManageVideo(videoData, ip, auth)) {
+		return "Not authorised to edit a match on this video.";
 	}
 
 	this.editVideoSpecificFields(videoData, form, ip, auth);
 
 	let match = videoData.matches.find(m => parseInt(m.orderIndex) === parseInt(form.orderIndex));
 	if(!match) {
-		return;
+		return "Match not found.";
 	}
 
 	let log = `Modified ${auth ? "" : "provisional "}match\t`;
@@ -240,10 +257,8 @@ MatchManger.prototype.deleteMatch = function(form, ip, auth) {
 	}
 	let video = this.server.games[form.vid];
 
-	if(!video.provIP && !auth) {
-		return "Not authorised to delete a match on a non-provisional video.";
-	} else if(!auth && video.provIP && video.provIP !== ip) {
-		return "This provisional video was added by someone else.";
+	if(!this.canManageVideo(video, ip, auth)) {
+		return "Not authorised to delete a match on this video.";
 	}
 
 	for(let i = 0; i < video.matches.length; i++) {

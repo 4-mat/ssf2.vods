@@ -10,13 +10,13 @@ module.exports = {
 			"name": "Eika",
 			"html": "<p>I made this!</p><p>See me in melty!</p><a href='https://twitter.com/Eika_da'>@Eika_da</a>",
 			"img": "/img/eika.png",
-			"token": "eikaaa"
+			"token": process.env.EIKA_TOKEN
 		},
 		{
 			"name": "Someone",
 			"html": "<p>I add and approve matches, because I care!</p>",
 			"img": "/img/someone.png",
-			"token": "somelse1"
+			"token": process.env.SOMEONE_TOKEN
 		},
 		{
 			"name": "Yabai",
@@ -27,7 +27,7 @@ module.exports = {
 			"name": "HoleeFuk",
 			"html": "<p>I have a token, but can't approve!</p>",
 			"img": "/img/someone.png",
-			"token": "hohoho",
+			"token": process.env.HOLEEFUK_TOKEN,
 			"noApprove": true
 		}
 	]

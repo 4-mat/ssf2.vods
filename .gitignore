@@ -2,3 +2,11 @@
 # Local configuration files
 config.js
 Config.js.js
+
+# Local data and backups
+data/*.backup
+data/reports.data
+data/log-*.data
+
+# Installed dependencies
+node_modules/

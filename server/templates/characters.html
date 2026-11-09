@@ -15,11 +15,13 @@
 			</div>
 		</div>
 		<div class="container char-select p-2">
-			<div class="char-img-wrap"><img class="char-img" src="\KusaGames-master\KusaGames-master\site\img\chars\Mario.png" data-id="Mario"></div>
-			<div class="char-img-wrap"><img class="char-img" src="\KusaGames-master\KusaGames-master\site\img\chars\Luffy.png" data-id="Luffy"></div>
-			<div class="char-img-wrap"><img class="char-img" src="\KusaGames-master\site\img\chars\Lloyd.png" data-id="Lloyd"></div>
-		</div>
-		<img id="bg-img" class="bg-img" src="">
+		<% Object.values(server.charMap).forEach(function(char) { %>
+		<button type="button" class="char-img-wrap" aria-label="<%- char.name %>" title="<%- char.name %>">
+			<img class="char-img" src="/img/chars/<%- char.id %>.png" data-id="<%- char.id %>" alt="<%- char.name %>">
+		</button>
+		<% }); %>
+	</div>
+	<img id="bg-img" class="bg-img" src="">
 		<div id="char-info-container" class="container char-info" hidden>
 			<div class="row">
 				<div class="col-sm shadow">

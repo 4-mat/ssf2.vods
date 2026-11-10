@@ -52,6 +52,10 @@ MatchManger.prototype.validateAddEditVideoForm = function(form) {
 		return "Invalid netplay value";
 	}
 
+	if(form.netcode !== "D" && form.netcode !== "R") {
+		return "Select a valid netcode: Delay-based or Rollback.";
+	}
+
 	if(!form.tags || typeof form.tags !== "string") {
 		form.tags = [];
 	} else {
@@ -95,7 +99,7 @@ MatchManger.prototype.editVideo = function(form, ip, auth) {
 MatchManger.prototype.addMatch = function(form, ip, auth) {
 	let error = this.validateAddEditVideoForm(form);
 	if(error) return error;
-	error = this.validateAddEditMatchForm(form);
+	error = this.validateAddEditMatchForm(form, true);
 	if(error) return error;
 
 	let videoData = this.server.games[form.vid] || {};
@@ -121,9 +125,37 @@ MatchManger.prototype.addMatch = function(form, ip, auth) {
 		return "Not authorised to add a match to this video.";
 	}
 
+	videoData.matches = videoData.matches || [];
+
+	const normalizeName = name => (name || "").trim().toLowerCase();
+	const p1 = normalizeName(form.p1name);
+	const p2 = normalizeName(form.p2name);
+
+	const duplicate = p1 && p2 && videoData.matches.some(match => {
+		if(parseInt(match.time) !== parseInt(form.time)) return false;
+
+		const existingP1 = normalizeName(match.p1name);
+		const existingP2 = normalizeName(match.p2name);
+
+		return (p1 === existingP1 && p2 === existingP2) ||
+			(p1 === existingP2 && p2 === existingP1);
+	});
+
+	if(duplicate && form.allowDuplicate !== "true") {
+		return {
+			duplicate: true,
+			message: "A match with these players already exists at this timestamp. Add it anyway?"
+		};
+	}
+
+	if(!duplicate && videoData.matches.some(match =>
+		Math.abs(parseInt(match.time) - parseInt(form.time)) < 10
+	)) {
+		return "There is already a match within 10 seconds.";
+	}
+
 	this.editVideoSpecificFields(videoData, form, ip, auth);
 
-	videoData.matches = videoData.matches || [];
 	videoData.matches.push({
 		"time": parseInt(form.time),
 		"readableTime": utils.convertSecondsToReadable(form.time),
@@ -170,12 +202,14 @@ MatchManger.prototype.editMatch = function(form, ip, auth) {
 		return "Not authorised to edit a match on this video.";
 	}
 
-	this.editVideoSpecificFields(videoData, form, ip, auth);
-
-	let match = videoData.matches.find(m => parseInt(m.orderIndex) === parseInt(form.orderIndex));
+	let match = form.matchId
+		? videoData.matches.find(m => String(m.id) === String(form.matchId))
+		: videoData.matches.find(m => parseInt(m.orderIndex) === parseInt(form.orderIndex));
 	if(!match) {
 		return "Match not found.";
 	}
+
+	this.editVideoSpecificFields(videoData, form, ip, auth);
 
 	let log = `Modified ${auth ? "" : "provisional "}match\t`;
 	log += `VideoID: ${form.vid}\t`;
@@ -246,6 +280,15 @@ MatchManger.prototype.editVideoSpecificFields = function(videoData, form, ip, au
 
 		videoData.netplay = form.netplay;
 	}
+
+	if(videoData.netcode !== form.netcode) {
+		let log = "Modified video\t";
+		log += `VideoID: ${form.vid}\t`;
+		log += `Netcode From: ${videoData.netcode || "Unset"}\t`;
+		log += `Netcode To: ${form.netcode}.`;
+		this.server.logger.log(log, ip, auth);
+		videoData.netcode = form.netcode;
+	}
 };
 
 MatchManger.prototype.deleteMatch = function(form, ip, auth) {
@@ -261,9 +304,13 @@ MatchManger.prototype.deleteMatch = function(form, ip, auth) {
 		return "Not authorised to delete a match on this video.";
 	}
 
+	let matchFound = false;
+
 	for(let i = 0; i < video.matches.length; i++) {
 		let m = video.matches[i];
-		if(m.time === form.time) {
+		if(form.matchId
+			? String(m.id) === String(form.matchId)
+			: m.time === form.time) {
 			let log = `Deleted ${auth ? "" : "provisional "}match\t`;
 			log += `VideoID: ${form.vid}\t`;
 			log += `Time: ${m.time}\t`;
@@ -273,8 +320,13 @@ MatchManger.prototype.deleteMatch = function(form, ip, auth) {
 			this.server.logger.log(log, ip, auth);
 
 			video.matches.splice(i, 1);
+			matchFound = true;
 			break;
 		}
+	}
+
+	if(!matchFound) {
+		return "Match not found.";
 	}
 
 	if(video.matches.length === 0) {

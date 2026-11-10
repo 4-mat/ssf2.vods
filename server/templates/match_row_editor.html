@@ -19,7 +19,7 @@
 	<td>
 		<a class="edit-button" 
 			data-seek="1"
-			data-idx="<%=match.orderIndex%>" 
+			data-match-id="<%=match.id || ''%>" data-idx="<%=match.orderIndex%>"
 			data-p1char="<%=match.p1char%>" 
 			data-p2char="<%=match.p2char%>" 
 			data-p1name="<%=match.p1name%>" 
@@ -28,7 +28,7 @@
 			data-time="<%=match.time%>">Edit and seek</a>
 		<br>
 		<a class="edit-button" 
-			data-idx="<%=match.orderIndex%>" 
+			data-match-id="<%=match.id || ''%>" data-idx="<%=match.orderIndex%>"
 			data-p1char="<%=match.p1char%>" 
 			data-p2char="<%=match.p2char%>" 
 			data-p1name="<%=match.p1name%>" 
@@ -37,6 +37,6 @@
 			data-time="<%=match.time%>">Edit only</a>
 	</td>
 	<td>
-		<button class="delete-button" data-time="<%=match.time%>">Delete</button>
+		<button class="delete-button" data-match-id="<%=match.id || ''%>" data-time="<%=match.time%>">Delete</button>
 	</td>
 </tr>

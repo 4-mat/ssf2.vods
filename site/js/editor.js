@@ -24,6 +24,7 @@ function Editor(videoId) {
 	this.WinnerSelect = document.getElementById("WinnerSelect");
 	this.VideoTags = document.getElementById("VideoTags");
 	this.NetplaySelect = document.getElementById("NetplaySelect");
+	this.NetcodeSelect = document.getElementById("NetcodeSelect");
 	this.UpdateVideoDataButton = document.getElementById("UpdateVideoDataButton");
 	this.ActionButton = document.getElementById("ActionButton");
 	this.TimeRefreshButton = document.getElementById("TimeRefreshButton");
@@ -45,6 +46,7 @@ function Editor(videoId) {
 
 	this._editingRow = null;
 	this._editingOrderIndex = null;
+	this._editingMatchId = null;
 }
 
 Editor.prototype.setupEvents = function() {
@@ -79,6 +81,7 @@ Editor.prototype.setupEvents = function() {
 			vid: this.YoutubePlayer.getVideoData().video_id,
 			date: this.VideoDate.value,
 			netplay: this.NetplaySelect.value,
+			netcode: this.NetcodeSelect.value,
 			tags: this.VideoTags.value.trim()
 		};
 
@@ -112,6 +115,8 @@ Editor.prototype.setupEvents = function() {
 			this._editingRow.classList.remove("editing");
 			this._editingRow = null;
 		}
+		this._editingMatchId = null;
+		this._editingOrderIndex = null;
 	});
 
 	this.EnterTokenButton.addEventListener("click", () => {
@@ -204,6 +209,7 @@ Editor.prototype.updateMatchList = function(vid) {
 			this.ResultsList.innerHTML = json.html || "";
 			this.VideoDate.value = json.date || "";
 			this.NetplaySelect.value = json.netplay || "";
+			this.NetcodeSelect.value = json.netcode || "";
 			this.VideoTags.value = json.tags ? json.tags.join("|") : "";
 
 			//Go To buttons events
@@ -226,7 +232,8 @@ Editor.prototype.updateMatchList = function(vid) {
 						btn.dataset.p2name,
 						btn.dataset.winner,
 						parseInt(btn.dataset.time),
-						btn.dataset.seek === "1"
+						btn.dataset.seek === "1",
+						btn.dataset.matchId
 					);
 				};
 			}
@@ -234,7 +241,7 @@ Editor.prototype.updateMatchList = function(vid) {
 			let deleteButtons = document.getElementsByClassName("delete-button");
 			for(let btn of deleteButtons) {
 				btn.onclick = () => {
-					this.deleteMatch(parseInt(btn.dataset.time));
+					this.deleteMatch(parseInt(btn.dataset.time), btn.dataset.matchId);
 				};
 			}
 
@@ -243,7 +250,7 @@ Editor.prototype.updateMatchList = function(vid) {
 	});
 };
 
-Editor.prototype.editButtonPress = function(btn, idx, p1char, p1name, p2char, p2name, winner, time, seek) {
+Editor.prototype.editButtonPress = function(btn, idx, p1char, p1name, p2char, p2name, winner, time, seek, matchId) {
 	this.ActionButton.innerText = "Edit";
 
 	if(seek) {
@@ -264,17 +271,22 @@ Editor.prototype.editButtonPress = function(btn, idx, p1char, p1name, p2char, p2
 	this._editingRow.classList.add("editing");
 	this.CancelEditContainer.removeAttribute("hidden");
 	this._editingOrderIndex = idx;
+	this._editingMatchId = matchId || null;
 	this.YoutubePlayer.getIframe().scrollIntoView();
 };
 
 Editor.prototype.editMatch = function() {
+	const matchId = this._editingMatchId;
+	const orderIndex = this._editingOrderIndex;
 	this.CancelEditButton.click();
 	let obj = {
 		vid: this.YoutubePlayer.getVideoData().video_id,
 		date: this.VideoDate.value,
 		time: this.time,
 		netplay: this.NetplaySelect.value,
-		orderIndex: this._editingOrderIndex,
+			netcode: this.NetcodeSelect.value,
+		orderIndex,
+		matchId,
 		p1char: this.P1Char.value,
 		p1name: this.P1Name.value.trim(),
 		p2char: this.P2Char.value,
@@ -297,14 +309,15 @@ Editor.prototype.editMatch = function() {
 	});
 };
 
-Editor.prototype.deleteMatch = function(time) {
+Editor.prototype.deleteMatch = function(time, matchId) {
 	let sure = confirm("You sure?");
 	if(sure) {
 		this.CancelEditButton.click();
 		let vid = this.YoutubePlayer.getVideoData().video_id;
 		let obj = {
 			vid,
-			time
+			time,
+			matchId
 		};
 		fetch("/deleteMatch", {
 			method: "DELETE",
@@ -333,6 +346,7 @@ Editor.prototype.addMatch = function() {
 		time: this.time,
 		readableTime: ConvertSecondsToReadable(this.time),
 		netplay: this.NetplaySelect.value,
+			netcode: this.NetcodeSelect.value,
 		p1char: this.P1Char.value,
 		p1name: this.P1Name.value.trim(),
 		p2char: this.P2Char.value,
@@ -345,19 +359,32 @@ Editor.prototype.addMatch = function() {
 	this.addNameToLists(this.P1Name.value);
 	this.addNameToLists(this.P2Name.value);
 
-	fetch("/addMatch", {
+	const submitMatch = () => fetch("/addMatch", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json"
 		},
 		body: JSON.stringify(obj)
-	}).then(r => {
-		if(r.status !== 200) {
-			r.text().then(alert);
+	});
+
+	submitMatch().then(async r => {
+		if(r.status === 409) {
+			const result = await r.json();
+			if(confirm(result.message)) {
+				obj.allowDuplicate = "true";
+				const retry = await submitMatch();
+				if(retry.status !== 200) {
+					alert(await retry.text());
+				} else {
+					this.updateMatchList();
+				}
+			}
+		} else if(r.status !== 200) {
+			alert(await r.text());
 		} else {
 			this.updateMatchList();
 		}
-	});
+	}).catch(error => alert(error.message));
 };
 
 Editor.prototype.addNameToLists = function(name) {

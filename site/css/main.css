@@ -458,3 +458,7 @@ a {
     position: relative;
     z-index: 1;
 }
+
+.tag.netcode-delay {
+	background-color: #f39c12;
+}

@@ -21,6 +21,11 @@
 	<td class="d-none d-md-table-cell">
 		<%
 		var tags = match.videoData.tags;
+		var netcodeTag = match.videoData.netcode === "D" ? "Delay-Based" :
+		                 match.videoData.netcode === "R" ? "Rollback" : "";
+		if(netcodeTag) {
+			%><span class="tag <%=match.videoData.netcode === "D" ? "netcode-delay" : ""%>"><%=netcodeTag%></span><%
+		}
 		for(let tag of tags) {
 			%>
 			<span class="tag"><%=tag%></span>

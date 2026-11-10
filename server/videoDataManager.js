@@ -28,6 +28,7 @@ VideoDataManager.prototype.parseData = function(data) {
                 date: split[1],
                 netplay: split[2],
                 tags: split[3] ? split[3].split("|") : [],
+                netcode: split[5] || "",
                 provIP: split[4] ? split[4] : null,
                 matches: []
             };
@@ -60,13 +61,64 @@ VideoDataManager.prototype.getJSON = function() {
 };
 
 VideoDataManager.prototype.loadJSON = async function() {
-    if(process.env.DATABASE_URL) {
-        const initialData = fs.readFileSync(this.filename, "utf8");
-        const savedData = await database.initialize(initialData);
-        return this.parseData(savedData);
+    if(!process.env.DATABASE_URL) {
+        return this.getJSON();
     }
 
-    return this.getJSON();
+    const initialData = fs.readFileSync(this.filename, "utf8");
+    await database.initialize(initialData);
+
+    const rows = await database.loadMatchData();
+    const output = {};
+    const tagsByVideo = new Map();
+    const matchesByVideo = new Map();
+
+    rows.tags.forEach(row => {
+        if(!tagsByVideo.has(row.video_id)) {
+            tagsByVideo.set(row.video_id, []);
+        }
+        tagsByVideo.get(row.video_id).push(row.tag);
+    });
+
+    rows.matches.forEach(row => {
+        if(!matchesByVideo.has(row.video_id)) {
+            matchesByVideo.set(row.video_id, []);
+        }
+        matchesByVideo.get(row.video_id).push(row);
+    });
+
+    rows.videos.forEach(row => {
+        const video = {
+            id: row.youtube_id,
+            date: row.video_date instanceof Date
+                ? row.video_date.toISOString().slice(0, 10)
+                : String(row.video_date).slice(0, 10),
+            netplay: row.netplay,
+            tags: tagsByVideo.get(row.youtube_id) || [],
+            netcode: row.netcode || "",
+            provIP: row.provisional_ip || null,
+            matches: []
+        };
+
+        (matchesByVideo.get(row.youtube_id) || []).forEach(match => {
+            video.matches.push({
+                id: String(match.id),
+                orderIndex: video.matches.length + 1,
+                time: match.timestamp_seconds,
+                readableTime: utils.convertSecondsToReadable(match.timestamp_seconds),
+                p1char: match.p1_character,
+                p1name: match.p1_name,
+                p2char: match.p2_character,
+                p2name: match.p2_name,
+                winner: String(match.winner),
+                videoData: video
+            });
+        });
+
+        output[video.id] = video;
+    });
+
+    return output;
 };
 
 VideoDataManager.prototype.serializeData = function(json) {
@@ -76,7 +128,7 @@ VideoDataManager.prototype.serializeData = function(json) {
         if(str.length !== 0) str += "\n";
 
         let data = json[vid];
-        str += `${vid}\t${data.date}\t${data.netplay}\t${data.tags.map(t => t.trim()).join("|")}\t${data.provIP || ""}\n`;
+        str += `${vid}\t${data.date}\t${data.netplay}\t${data.tags.map(t => t.trim()).join("|")}\t${data.provIP || ""}\t${data.netcode || ""}\n`;
 
         data.matches.sort((a, b) => a.time - b.time);
 
@@ -90,11 +142,10 @@ VideoDataManager.prototype.serializeData = function(json) {
 };
 
 VideoDataManager.prototype.saveData = async function(json) {
-    const data = this.serializeData(json);
-
     if(process.env.DATABASE_URL) {
-        await database.saveMatchData(data);
+        await database.saveMatchData(json);
     } else {
+        const data = this.serializeData(json);
         fs.writeFileSync(this.filename, data);
     }
 };

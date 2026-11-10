@@ -36,6 +36,7 @@
 						<button id="EnterTokenButton"><%=auth?'Update':'Enter'%> token</button>
 					</p>
 				</div>
+
 			</div>
 			<div class="row justify-content-center">
 				<div class="col-4">
@@ -129,6 +130,18 @@
 								<option value="">Locals or Netplay?</option>
 								<option value="L">Locals (offline)</option>
 								<option value="N">Netplay</option>
+							</select>
+						</span>
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-2">
+					<div class="ms-form-group">
+						<label><b>NETCODE</b></label>
+						<span class="select">
+							<select id="NetcodeSelect">
+								<option value="">Select netcode</option>
+								<option value="D">Delay-based</option>
+								<option value="R">Rollback</option>
 							</select>
 						</span>
 					</div>

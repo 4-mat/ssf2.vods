@@ -165,7 +165,11 @@ Server.prototype.setupRoutes = function() {
 		let ip = req.connection.remoteAddress;
 		let error = this.matchManager.addMatch(req.body, ip, this.authCheck(req));
 		if(error) {
-			res.status(400).send(error);
+			if(error.duplicate) {
+				res.status(409).json(error);
+			} else {
+				res.status(400).send(error);
+			}
 		} else {
 			await this.videoDataManager.saveData(this.games);
 			res.sendStatus(200);
@@ -216,6 +220,7 @@ Server.prototype.setupRoutes = function() {
 				}),
 				date: this.games[vid] && this.games[vid].date,
 				netplay: this.games[vid] && this.games[vid].netplay,
+				netcode: this.games[vid] && this.games[vid].netcode,
 				tags: this.games[vid] && this.games[vid].tags,
 			}
 			res.send(JSON.stringify(json));

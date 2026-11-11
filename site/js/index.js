@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	let p2name = document.getElementById("p2name");
 	let videoId = document.getElementById("videoId");
 	let videoTag = document.getElementById("videoTag");
+	let rollbackCheckbox = document.getElementById("rollback-checkbox");
+	let rollbackFilter = document.getElementById("rollback-filter");
 
 	//Strip names until search
 	page.dataset.name = page.name;
@@ -39,6 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	videoId.onchange = onFormChange;
 	videoTag.onchange = onFormChange;
 
+	rollbackCheckbox.addEventListener("change", () => {
+		rollbackFilter.value = rollbackCheckbox.checked ? "1" : "0";
+		onFormChange();
+	});
+
 	//Populate fields to the params
 	let url = new URLSearchParams(location.search);
 	page.value = url.get("page")||"1";
@@ -50,6 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	p2name.value = url.get("p2name")||"";
 	videoTag.value = url.get("tag")||"";
 	videoId.value = url.get("vid")||"";
+
+	let rollbackParam = url.get("rollback");
+	rollbackCheckbox.checked = rollbackParam !== "0" && rollbackParam !== "false";
+	rollbackFilter.value = rollbackCheckbox.checked ? "1" : "0";
 	
 	//Search button
 	document.getElementById("search-button").addEventListener("click", () => {
@@ -132,6 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			videoTag.name = videoTag.dataset.name;
 		}
 
+		rollbackFilter.value = rollbackCheckbox.checked ? "1" : "0";
 		return hasValue;
 	}
 

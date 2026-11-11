@@ -10,6 +10,8 @@
 		<%
 		let playerNames = server.statisticsManager.getPlayerNames();
 		let videoTags = server.statisticsManager.getVideoTags();
+		videoTags = Array.from(new Set([...videoTags, "Delay-Based", "Rollback"]))
+			.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 		%>
 		<div class="container">
 			<div class="ms-content">
@@ -19,6 +21,7 @@
 				</hgroup>
 				<form method="GET" id="form">
 					<input type="hidden" id="page" name="page" value="1">
+					<input type="hidden" id="rollback-filter" name="rollback" value="1">
 					<div class="row">
 						<div class="col-sm">
 							<div class="ms-form-group">
@@ -113,9 +116,14 @@
 							</div>
 						</div>
 					</div>
-					<div class="row justify-content-center">
+					<div class="row justify-content-center align-items-center">
 						<div class="col-4">
 							<button id="search-button" type="button" class="ms-btn ms-info ms-fullwidth ms-medium">Search</button>
+						</div>
+						<div class="col-auto">
+							<label for="rollback-checkbox">
+								<input id="rollback-checkbox" type="checkbox" checked> Rollback
+							</label>
 						</div>
 					</div>
 				</form>
@@ -127,6 +135,13 @@
 			if(!matches) {
 			%>
 				<h2 class="ms-text-center py-4 shadow">Do a search!</h2>	
+			<%
+			} else if(search && search.conflict) {
+			%>
+				<h2 class="ms-text-center py-4 shadow">Conflicting Search Filters</h2>
+				<p class="ms-text-center">
+					You're searching for Delay-Based videos while the Rollback filter is enabled.
+				</p>
 			<%
 			} else if(matches.length === 0) {
 			%>

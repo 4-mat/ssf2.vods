@@ -24,6 +24,18 @@ SearchManager.prototype.search = function(data, form) {
 	};
 	let foundMatches = [];
 
+	// Delay-Based and the default Rollback-only filter cannot be active together.
+	let requestedTag = (form.tag || "").trim().toLowerCase();
+	let rollbackEnabled = form.rollback !== "0" && form.rollback !== "false";
+	if(rollbackEnabled && (requestedTag === "delay-based" || requestedTag === "delay based")) {
+		return {
+			"page": searchQuery.page,
+			"total": 0,
+			"matches": [],
+			"conflict": true
+		};
+	}
+
 	for(let videoId in data) {
 		let videoData = data[videoId];
 
@@ -34,8 +46,22 @@ SearchManager.prototype.search = function(data, form) {
 		if(form.vid && form.vid.length === 11 && videoData.id !== form.vid) {
 			continue;
 		}
-		if(form.tag && !videoData.tags.includes(form.tag)) {
+		// By default, restrict searches to rollback videos.
+		if(form.rollback !== "0" && form.rollback !== "false" && videoData.netcode !== "R") {
 			continue;
+		}
+
+		// Netcode labels are searchable alongside ordinary video tags.
+		if(form.tag) {
+			let tag = form.tag.trim().toLowerCase();
+
+			if(tag === "rollback") {
+				if(videoData.netcode !== "R") continue;
+			} else if(tag === "delay-based" || tag === "delay based") {
+				if(videoData.netcode !== "D") continue;
+			} else if(!videoData.tags.includes(form.tag)) {
+				continue;
+			}
 		}
 
 		//Check video netplay

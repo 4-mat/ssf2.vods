@@ -1,0 +1,1759 @@
+ppFh1d-4GDA	2022-01-28	N	SUMMIT|LATAM|1.3.1.1	
+0	Lloyd	Mariofeeh	Luffy	Diaquz	1
+187	Lloyd	Mariofeeh	Luffy	Diaquz	2
+336	Lloyd	Mariofeeh	Luffy	Diaquz	1
+585	Lloyd	Mariofeeh	Luffy	Diaquz	1
+
+WCDYB_D2PNo	2022-01-28	N	SUMMIT|LATAM|1.3.1.1	
+0	Bm	Drarky	Ichigo	Diaquz	2
+209	Bm	Drarky	Ichigo	Diaquz	2
+503	Bm	Drarky	Ichigo	Diaquz	2
+
+r60ubhIrNBo	2022-01-28	N	SUMMIT|LATAM|1.3.1.1	
+508	Lloyd	Mariofeeh	Bm	Drarky	1
+508	Lloyd	Mariofeeh	Bm	Drarky	1
+508	Lloyd	Mariofeeh	Bm	Drarky	1
+
+5oAuV95Z7_g	2022-01-28	N	SUMMIT|LATAM|1.3.1.1	
+210	Sora	Cradirox	Link	Diaquz	2
+210	Sora	Cradirox	Wario	Diaquz	2
+622	Sora	Cradirox	Lloyd	Diaquz	2
+
+rTLLuMbRTuA	2022-01-28	N	SUMMIT|LATAM|1.3.1	
+0	Isaac	Godblazing	Sora	Cradirox	1
+246	Isaac	Godblazing	Sora	Cradirox	2
+500	Isaac	Godblazing	Sora	Cradirox	1
+757	Isaac	Godblazing	Sora	Cradirox	2
+1052	Isaac	Godblazing	Sora	Cradirox	2
+
+Ad1cxnu8zVE	2022-01-28	N	SUMMIT|LATAM|1.3.1	
+0	Luffy	Diaquz	Ness	Kastel (Marquin)	1
+218	Isaac	Diaquz	Ness	Kastel (Marquin)	2
+442	Luffy	Diaquz	Ness	Kastel (Marquin)	2
+635	Luffy	Diaquz	Ness	Kastel (Marquin)	1
+734	Luffy	Diaquz	Ness	Kastel (Marquin)	1
+
+YYR87KF20y0	2022-01-28	N	SUMMIT|LATAM|1.3.1	
+0	Lloyd	Mariofeeh	Sora	Cradirox	1
+267	Lloyd	Mariofeeh	Sora	Cradirox	1
+456	Lloyd	Mariofeeh	Sora	Cradirox	1
+
+-7Zxu8T6K_U	2022-01-28	N	SUMMIT|LATAM|1.3.1	
+0	Bm	Drarky	Ness	Kastel (Marquin)	1
+273	Chibi	Drarky	Ness	Kastel (Marquin)	1
+573	Chibi	Drarky	Ness	Kastel (Marquin)	2
+876	Bm	Drarky	Ness	Kastel (Marquin)	2
+1220	Bm	Drarky	Ness	Kastel (Marquin)	1
+
+mPGTJ95Sr8s	2024-07-21	N	FrozenPeak|LATAM|1.3.2	
+608	Gnw	Barrilito	Bag	Sr. Rick	2
+850	Gnw	Barrilito	Bag	Sr. Rick	1
+1174	Gnw	Barrilito	Bag	Sr. Rick	1
+1484	Gnw	Barrilito	Bag	Sr. Rick	2
+1688	Gnw	Barrilito	Bag	Sr. Rick	2
+2042	Isaac	KenyiK	Mk	Gat	1
+2356	Luffy	KenyiK	Mk	Gat	1
+2566	Luffy	KenyiK	Mk	Gat	2
+2797	Luffy	KenyiK	Mk	Gat	1
+3643	Bm	Diaquz	Ness	Kastel (Marquin)	1
+3924	Bm	Diaquz	Ness	Kastel (Marquin)	2
+4258	Bm	Diaquz	Ness	Kastel (Marquin)	1
+4510	Bm	Diaquz	Ness	Kastel (Marquin)	1
+5027	Gnw	Rs	Lucario	Powtter (Gonzero)	1
+5275	Gnw	Rs	Lucario	Powtter (Gonzero)	1
+5537	Sora	Rs	Lucario	Powtter (Gonzero)	2
+5854	Gnw	Rs	Lucario	Powtter (Gonzero)	1
+6249	Ichigo	Diaquz	Sora	Rs	1
+6489	Ichigo	Diaquz	Sora	Rs	2
+6710	Ichigo	Diaquz	Sora	Rs	1
+7030	Ichigo	Diaquz	Sora	Rs	2
+7293	Ichigo	Diaquz	Sora	Rs	2
+7675	Bag	Sr. Rick	Luffy	KenyiK	1
+7872	Bag	Sr. Rick	Isaac	KenyiK	1
+7978	Bag	Sr. Rick	Isaac	KenyiK	2
+8225	Bag	Sr. Rick	Sora	KenyiK	1
+8959	Zss	MT402	Lucario	Powtter (Gonzero)	2
+9246	Zss	MT402	Lucario	Powtter (Gonzero)	2
+9778	Wario	MT402	Lucario	Powtter (Gonzero)	1
+9779	Zss	MT402	Sora	Powtter (Gonzero)	1
+10030	Zss	MT402	Sora	Powtter (Gonzero)	2
+10523	Zelda	EdgarBlink	Gnw	Barrilito	1
+10735	Zelda	EdgarBlink	Gnw	Barrilito	2
+11033	Zelda	EdgarBlink	Gnw	Barrilito	1
+11404	Zelda	EdgarBlink	Gnw	Barrilito	2
+11706	Zelda	EdgarBlink	Gnw	Barrilito	1
+12292	Bag	Sr. Rick	Gnw	Rs	2
+12505	Bag	Sr. Rick	Gnw	Rs	1
+12737	Bag	Sr. Rick	Gnw	Rs	2
+12994	Bag	Sr. Rick	Gnw	Rs	2
+14546	Lucario	Powtter (Gonzero)	Luffy	KenyiK	2
+14781	Lucario	Powtter (Gonzero)	Luffy	KenyiK	1
+15047	Lucario	Powtter (Gonzero)	Sora	KenyiK	2
+15222	Lucario	Powtter (Gonzero)	Sora	KenyiK	1
+15540	Lucario	Powtter (Gonzero)	Sora	KenyiK	1
+16168	Marth	Diaquz	Zelda	EdgarBlink	1
+16402	Sheik	Diaquz	Zelda	EdgarBlink	1
+16684	Sora	Diaquz	Zss	EdgarBlink	1
+17037	Bm	Diaquz	Lucario	Powtter (Gonzero)	2
+17297	Bbm	Diaquz	Lucario	Powtter (Gonzero)	1
+17611	Bbm	Diaquz	Lucario	Powtter (Gonzero)	1
+17851	Bbm	Diaquz	Lucario	Powtter (Gonzero)	1
+18211	Bm	Diaquz	Bag	Sr. Rick	1
+18534	Gnw	Diaquz	Bag	Sr. Rick	1
+18738	Gnw	Diaquz	Bag	Sr. Rick	1
+18994	Ichigo	Diaquz	Sora	Rs	2
+19253	Bm	Diaquz	Sora	Rs	2
+19509	Bbm	Diaquz	Sora	Rs	1
+19770	Bbm	Diaquz	Sora	Rs	1
+20032	Bbm	Diaquz	Sora	Rs	2
+
+JWcwzOElBwg	2020-12-21	N	Frontier|LATAM|1.3	
+5	Mk	Diaquz	Mega	EstebanGamer636	1
+
+0AaEUX91qa8	2021-08-28	N	SSF2 Warriors|LATAM|1.3.1	
+6	Isaac	KenyiK	Samus	Lpoool	1
+413	Isaac	KenyiK	Samus	Lpoool	1
+
+MNjZE9n4giY	2021-08-28	N	SSF2 Warriors|LATAM|1.3.1	
+6	Lloyd	Mariofeeh	Isaac	Godblazing	2
+295	Marth	Mariofeeh	Isaac	Godblazing	2
+
+u8w-bIKk5f4	2021-08-28	N	SSF2 Warriors|LATAM|1.3.1	
+8	Sora	Cradirox	Luffy	Diaquz	1
+217	Sora	Cradirox	Luffy	Diaquz	1
+495	Sora	Cradirox	Ichigo	Diaquz	2
+738	Sora	Cradirox	Ichigo	Diaquz	2
+1056	Sora	Cradirox	Ichigo	Diaquz	2
+
+E2Wjxzq-GjE	2021-08-28	N	SSF2 Warriors|LATAM|1.3.1	
+7	Isaac	Godblazing	Luffy	KenyiK	2
+297	Isaac	Godblazing	Luffy	KenyiK	1
+574	Isaac	Godblazing	Pika	KenyiK	1
+866	Isaac	Godblazing	Luffy	KenyiK	1
+
+Mw4AT2OEZuY	2021-08-28	N	SSF2 Warriors|LATAM|1.3.1	
+5	Lloyd	Mariofeeh	Sora	Cradirox	2
+250	Marth	Mariofeeh	Sora	Cradirox	2
+473	Marth	Mariofeeh	Sora	Cradirox	1
+697	Marth	Mariofeeh	Sora	Cradirox	2
+
+VbpFfB6UjUk	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+2	Dk	Lag-Man	Dk	DonVega	1
+236	Dk	Lag-Man	Dk	DonVega	1
+
+JqdhvWD4idk	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Gnw	Barrilito	Isaac	KenyiK	2
+324	Gnw	Barrilito	Sora	KenyiK	2
+708	Gnw	Barrilito	Luffy	KenyiK	2
+
+4qYA1-qvQ1M	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Link	SrB	Ryu	GabrielKof	2
+268	Link	SrB	Ryu	GabrielKof	2
+
+32foM5oKqUQ	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+2	Link	SrB	Samus	Capitano2	1
+278	Link	SrB	Lucario	Capitano2	1
+
+I36onxzFwFY	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Sora	Rs	Sonic	KenyiK	2
+267	Sora	Rs	Sonic	KenyiK	1
+586	Sora	Rs	Luffy	KenyiK	2
+784	Sora	Rs	Fox	KenyiK	1
+1056	Sora	Rs	Gnw	KenyiK	2
+
+Bll16lQ65Ys	2021-08-28	N	SSF2 Warriors|LATAM|1.3.2	
+6	Gnw	KiuroZ	Puff	Jhossmel	1
+219	Gnw	KiuroZ	Puff	Jhossmel	1
+
+6NNWTDAl1xQ	2022-08-28	N	SSF2 Warriors|LATAM|1.3.2	
+6	Gnw	KiuroZ	Isaac	KenyiK	2
+205	Luigi	KiuroZ	Isaac	KenyiK	2
+484	Bag	KiuroZ	Isaac	KenyiK	2
+
+P3FAWNNCiwA	2021-08-28	N	SSF2 Warriors|LATAM|1.3.2	
+6	Luffy	KenyiK	Sora	Cradirox	2
+310	Luffy	KenyiK	Sora	Cradirox	2
+504	Luffy	KenyiK	Sora	Cradirox	1
+766	Luffy	KenyiK	Sora	Cradirox	1
+987	Luffy	KenyiK	Sora	Cradirox	2
+
+0xm6a2GzIYc	2021-08-28	N	SSF2 Warriors|LATAM|1.3.1	
+6	Isaac	Godblazing	Isaac	Diaquz	1
+297	Isaac	Godblazing	Wario	Diaquz	2
+626	Isaac	Godblazing	Lloyd	Diaquz	1
+844	Isaac	Godblazing	Link	Diaquz	1
+
+1qSXEOt-_yA	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Zss	MT402	Goku	GabrielKof	1
+245	Zss	MT402	Ryu	GabrielKof	1
+367	Zss	MT402	Goku	GabrielKof	1
+
+xoYTeZLxKAw	2021-08-28	N	SSF2 Warriors|LATAM|1.3.2	
+5	Luffy	Diaquz	Sora	Cradirox	2
+242	Ichigo	Diaquz	Sora	Cradirox	2
+577	Ichigo	Diaquz	Sora	Cradirox	1
+871	Ichigo	Diaquz	Sora	Cradirox	2
+
+KMda-qBRCl0	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Link	SrB	Gnw	Barrilito	1
+251	Link	SrB	Gnw	Barrilito	2
+458	Link	SrB	Gnw	Barrilito	1
+
+t_657pOgpto	2021-08-28	N	SSF2 Warriors|LATAM|1.3.2	
+6	Isaac	Godblazing	Sora	Cradirox	2
+309	Isaac	Godblazing	Sora	Cradirox	2
+542	Isaac	Godblazing	Sora	Cradirox	1
+840	Isaac	Godblazing	Sora	Cradirox	2
+
+Dt-je2ivRs4	2021-10-02	N	JMI Temple: Worldwide|LATAM|1.3.1	
+147	Luffy	KenyiK	Bbm	AJHP (Lembruh/Alanweon)	2
+562	Luffy	KenyiK	Yoshi	AJHP (Lembruh/Alanweon)	2
+912	Naruto	Briamty289	Isaac	Diaquz	1
+1177	Cf	Briamty289	Bm	Diaquz	1
+1453	Sonic	Briamty289	Ichigo	Diaquz	2
+1728	Goku	Briamty289	Link	Diaquz	2
+1950	Mario	Briamty289	Waluigi	Diaquz	2
+
+Wnu5WKMSgnU	2021-10-02	N	JMI Temple: Worldwide|LATAM|1.3.1	
+190	Marth	Mariofeeh	Isaac	Godblazing	2
+662	Marth	Mariofeeh	Isaac	Godblazing	1
+989	Marth	Mariofeeh	Isaac	Godblazing	2
+1270	Lloyd	Mariofeeh	Isaac	Godblazing	1
+1686	Lloyd	Mariofeeh	Luffy	Diaquz	2
+2023	Lloyd	Mariofeeh	Bdee	Diaquz	1
+2256	Lloyd	Mariofeeh	Tails	Diaquz	2
+2433	Lloyd	Mariofeeh	Link	Diaquz	1
+2668	Lloyd	Mariofeeh	Ichigo	Diaquz	2
+3099	Bbm	AJHP (Lembruh/Alanweon)	Sheik	Sir.F	1
+3432	Ganon	AJHP (Lembruh/Alanweon)	Sheik	Sir.F	1
+3715	Ryu	AJHP (Lembruh/Alanweon)	Sheik	Sir.F	2
+4018	Pac	AJHP (Lembruh/Alanweon)	Sheik	Sir.F	1
+4430	Mk	Gat	Ganon	Decroz (Hermes)	1
+4706	Mk	Gat	Ganon	Decroz (Hermes)	2
+4939	Mk	Gat	Ganon	Decroz (Hermes)	1
+5189	Mk	Gat	Ganon	Decroz (Hermes)	1
+5741	Isaac	Godblazing	Yoshi	AJHP (Lembruh/Alanweon)	2
+6129	Isaac	Godblazing	Dk	AJHP (Lembruh/Alanweon)	2
+6428	Isaac	Godblazing	Cf	AJHP (Lembruh/Alanweon)	2
+6730	Mk	Gat	Link	Briamty289	2
+7005	Mk	Gat	Link	Briamty289	2
+7254	Mk	Gat	Link	Briamty289	1
+7519	Mk	Gat	Link	Briamty289	2
+7890	Cf	AJHP (Lembruh/Alanweon)	Falco	Briamty289	1
+8126	Dk	AJHP (Lembruh/Alanweon)	Naruto	Briamty289	1
+8394	Bowser	AJHP (Lembruh/Alanweon)	Naruto	Briamty289	1
+8612	Lloyd	Mariofeeh	Ganon	AJHP (Lembruh/Alanweon)	2
+8792	Lloyd	Mariofeeh	Wario	AJHP (Lembruh/Alanweon)	2
+9101	Lloyd	Mariofeeh	Bag	AJHP (Lembruh/Alanweon)	2
+9378	Bbm	Diaquz	Ness	AJHP (Lembruh/Alanweon)	1
+9570	Bm	Diaquz	Ness	AJHP (Lembruh/Alanweon)	1
+9815	Marth	Diaquz	Cf	AJHP (Lembruh/Alanweon)	2
+10010	Luffy	Diaquz	Ganon	AJHP (Lembruh/Alanweon)	2
+10129	Lloyd	Diaquz	Puff	AJHP (Lembruh/Alanweon)	1
+
+KvdKSjGnYWo	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+2	Sora	VaporeyeZ	Zss	MT402	1
+224	Sora	VaporeyeZ	Zss	MT402	1
+494	Sora	VaporeyeZ	Zss	MT402	1
+
+BEIglW9xvzU	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Isaac	KenyiK	Pika	Flamire	1
+245	Isaac	KenyiK	Pika	Flamire	1
+
+HocYCMOIhR4	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+5	Link	SrB	Ichigo	KiuroZ	2
+241	Link	SrB	Ichigo	KiuroZ	2
+495	Link	SrB	Ichigo	KiuroZ	1
+751	Link	SrB	Ichigo	KiuroZ	2
+
+V-_c2zC7Wos	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Wario	Samisyeps	Ryu	GabrielKof	2
+195	Wario	Samisyeps	Ryu	GabrielKof	1
+401	Wario	Samisyeps	Ryu	GabrielKof	2
+
+aYC_vWp6_dQ	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Link	SrB	Isaac	Coria	1
+330	Link	SrB	Isaac	Coria	1
+
+-NKr949K8YY	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+3	Naruto	Anne	Ichigo	Haze01	2
+225	Naruto	Anne	Ichigo	Haze01	2
+
+1wbpyXnxLHg	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+4	Bm	Kastel (Marquin)	Luffy	Diaquz	2
+234	Bm	Kastel (Marquin)	Luffy	Diaquz	1
+457	Bm	Kastel (Marquin)	Luffy	Diaquz	2
+571	Bm	Kastel (Marquin)	Luffy	Diaquz	2
+
+fnynx2wKIOg	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Samus	ItsDono	Dk	DonVega	2
+260	Samus	ItsDono	Dk	DonVega	2
+
+5il8g3E4tx4	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+3	Isaac	Godblazing	Bm	Kastel (Marquin)	2
+236	Isaac	Godblazing	Bm	Kastel (Marquin)	2
+581	Cf	Godblazing	Bm	Kastel (Marquin)	2
+
+ag7-X_ve_hg	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+4	Lloyd	Mariofeeh	Ichigo	Decroz (Hermes)	1
+263	Lloyd	Mariofeeh	Ichigo	Decroz (Hermes)	1
+480	Lloyd	Mariofeeh	Ichigo	Decroz (Hermes)	1
+
+5VuZd8ZZp3A	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+5	Bm	Drarky	Bag	Sr. Rick	2
+285	Bm	Drarky	Bag	Sr. Rick	1
+458	Bm	Drarky	Bag	Sr. Rick	1
+
+MuvxEWcv5bU	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Sora	Rs	Ryu	GabrielKof	1
+182	Sora	Rs	Goku	GabrielKof	1
+387	Sora	Rs	Goku	GabrielKof	1
+
+M7XFt_bRgrM	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+3	Lloyd	Mariofeeh	Bm	Kastel (Marquin)	2
+380	Lloyd	Mariofeeh	Bm	Kastel (Marquin)	2
+738	Sora	Mariofeeh	Bm	Kastel (Marquin)	2
+
+h9_YpQF38R4	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Ichigo	KiuroZ	Chibi	Drarky	1
+267	Ichigo	KiuroZ	Bm	Drarky	1
+
+ZrOJKBSnMjU	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+4	Naruto	Anne	Isaac	Godblazing	2
+256	Naruto	Anne	Isaac	Godblazing	2
+
+Nxkn1HqHVeg	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+4	Sora	Rs	Isaac	Coria	1
+176	Sora	Rs	Isaac	Coria	1
+
+Omao4UcLFzE	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+2	Wario	Diaquz	Isaac	Godblazing	1
+264	Sora	Diaquz	Isaac	Godblazing	1
+549	Bm	Diaquz	Isaac	Godblazing	1
+
+hBQVJtI_ryE	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Sonic	KenyiK	Gnw	Rs	2
+230	Sonic	KenyiK	Gnw	Rs	1
+496	Sonic	KenyiK	Sora	Rs	1
+714	Isaac	KenyiK	Lloyd	Rs	1
+
+b1H3wz1l_TE	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+3	Bm	Drarky	Luffy	Diaquz	1
+244	Bm	Drarky	Luffy	Diaquz	2
+469	Bm	Drarky	Ichigo	Diaquz	2
+774	Bm	Drarky	Ichigo	Diaquz	2
+
+iGedgJabDHA	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+0	Mk	Gat	Marth	Diaquz	2
+322	Mk	Gat	Isaac	Diaquz	2
+
+QrhtyqlgVpY	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+6	Sora	VaporeyeZ	Wario	Diaquz	1
+166	Sora	VaporeyeZ	Bbm	Diaquz	2
+428	Sora	VaporeyeZ	Bbm	Diaquz	2
+591	Sora	VaporeyeZ	Bbm	Diaquz	1
+814	Sora	VaporeyeZ	Bbm	Diaquz	1
+
+panRiVWQlVY	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+5	Bm	Drarky	Bm	Kastel (Marquin)	2
+402	Bm	Drarky	Bm	Kastel (Marquin)	2
+745	Bm	Drarky	Bm	Kastel (Marquin)	2
+
+KZGbDC7ndn4	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+5	Ichigo	Haze01	Sonic	Artmagic	2
+333	Zss	Haze01	Sonic	Artmagic	2
+569	Zss	Haze01	Sonic	Artmagic	2
+
+x1XJTWbxsSs	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+4	Sheik	Decroz (Hermes)	Sora	Sr. Rick	2
+344	Ichigo	Decroz (Hermes)	Bowser	Sr. Rick	1
+565	Ichigo	Decroz (Hermes)	Bag	Sr. Rick	1
+
+Z30whprm0CU	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+4	Isaac	KenyiK	Ichigo	Diaquz	1
+267	Sora	KenyiK	Ichigo	Diaquz	1
+365	Luffy	KenyiK	Bm	Diaquz	2
+667	Sora	KenyiK	Wario	Diaquz	1
+
+u4OspBUhmLY	2022-02-20	N	Monte Sunday Series|LATAM|1.3.2	
+4	Bm	Kastel (Marquin)	Ryu	GabrielKof	1
+199	Bm	Kastel (Marquin)	Ryu	GabrielKof	1
+
+zcImnCfHmkY	2022-02-22	N	Monte Sunday Series|LATAM|1.3.2	
+4	Isaac	Godblazing	Bm	Kastel (Marquin)	2
+274	Isaac	Godblazing	Bm	Kastel (Marquin)	2
+559	Isaac	Godblazing	Bm	Kastel (Marquin)	1
+816	Isaac	Godblazing	Bm	Kastel (Marquin)	1
+1077	Isaac	Godblazing	Bm	Kastel (Marquin)	1
+
+rV_LN81p6b4	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Lloyd	Sushi	Zss	MT402	2
+340	Lloyd	Sushi	Zss	MT402	1
+638	Lloyd	Sushi	Zss	MT402	2
+
+v0NeJm1wAK4	2022-02-22	N	Monte Sunday Series|LATAM|1.3.2	
+2	Sonic	Artmagic	Bm	Drarky	2
+360	Sonic	Artmagic	Bm	Drarky	1
+601	Sonic	Artmagic	Bm	Drarky	2
+819	Sonic	Artmagic	Bm	Drarky	1
+1140	Sonic	Artmagic	Bm	Drarky	2
+
+rnqnyT5OahA	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Link	SrB	Bag	NeitanGames	1
+302	Link	SrB	Bag	NeitanGames	1
+
+mNQeYl6SRrY	2022-02-22	N	Monte Sunday Series|LATAM|1.3.2	
+3	Lloyd	Mariofeeh	Mk	Gat	1
+347	Lloyd	Mariofeeh	Mk	Gat	2
+639	Lloyd	Mariofeeh	Mk	Gat	1
+
+mwbLv2mB3Ok	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Wario	Samisyeps	Zelda	EdgarBlink	2
+194	Wario	Samisyeps	Zelda	EdgarBlink	1
+345	Wario	Samisyeps	Zelda	EdgarBlink	2
+
+q7FjUKNb428	2022-02-22	N	Monte Sunday Series|LATAM|1.3.2	
+3	Sonic	Artmagic	Ryu	GabrielKof	2
+292	Sonic	Artmagic	Ryu	GabrielKof	1
+493	Sonic	Artmagic	Ryu	GabrielKof	1
+
+w2_lzdxXAO0	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Sora	VaporeyeZ	Bowser	Megaximo	1
+186	Sora	VaporeyeZ	Bowser	Megaximo	1
+
+j6KQC0pnWF0	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+2	Link	SrB	Sora	LARJ	1
+262	Link	SrB	Sora	LARJ	1
+
+nh9guTz0DiU	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Falco	NaitoMare(Smv)	Sora	VaporeyeZ	2
+79	Link	NaitoMare(Smv)	Tails	VaporeyeZ	2
+
+haV5tXxnVco	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Gnw	Barrilito	Ray	TheUnfunnyNoodles	1
+183	Gnw	Barrilito	Ray	TheUnfunnyNoodles	1
+
+jCZy5eWFvns	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+2	Sora	VaporeyeZ	Isaac	Rs	2
+329	Sora	VaporeyeZ	Isaac	Rs	2
+628	Sora	VaporeyeZ	Isaac	Rs	2
+
+ki7u8cWkvgA	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+3	Ichigo	KiuroZ	Zss	MT402	1
+299	Ichigo	KiuroZ	Zss	MT402	1
+545	Ichigo	KiuroZ	Zss	MT402	2
+847	Ichigo	KiuroZ	Zss	MT402	1
+
+smh9bpLNV0w	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+4	Sora	VaporeyeZ	Isaac	Rs	1
+282	Sora	VaporeyeZ	Isaac	Rs	2
+551	Sora	VaporeyeZ	Isaac	Rs	2
+793	Sora	VaporeyeZ	Isaac	Rs	2
+
+zQhxF-moLQo	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+2	Gnw	Barrilito	Zelda	EdgarBlink	2
+324	Gnw	Barrilito	Zelda	EdgarBlink	1
+607	Gnw	Barrilito	Sheik	EdgarBlink	1
+
+z1XO57U3pP0	2024-10-27	N	SSF2 Dead Zone|LATAM|1.3.2	
+5	Wario	Diaquz	Zss	MT402	1
+307	Wario	Diaquz	Zss	MT402	1
+518	Bbm	Diaquz	Zss	MT402	2
+795	Wario	Diaquz	Zss	MT402	2
+1044	Bbm	Diaquz	Zss	MT402	1
+
+IWgw4Q3MR4k	2019-09-14	N	Battle for the Big top|WW|1.1.0.1	
+16	Link	Chumpatrol	Dk	Diaquz	2
+237	Link	Chumpatrol	Link	Diaquz	2
+
+1nNFUkwyAso	2019-06-22	N	New Generation|LATAM|1.1.0.1	
+6	Mario	Fario	Bowser	Alexio	2
+201	Mario	Fario	Bowser	Alexio	2
+
+jwrhKSqrSIQ	2019-06-22	N	New Generation|LATAM|1.1.0.1	
+7	Pika	KenyiK	Bbm	Diaquz	2
+299	Pika	KenyiK	Dk	Diaquz	2
+
+Sb9KfiSKaJo	2019-06-22	N	New Generation|LATAM|1.1.0.1	
+6	Sora	EndyBerth	Pika	Dayer	1
+280	Sora	EndyBerth	Pika	Dayer	2
+566	Sora	EndyBerth	Pika	Dayer	2
+
+rN_jBj-3LmM	2019-06-22	N	New Generation|LATAM|1.1.0.1	
+7	Pika	KenyiK	Marth	Charlie	2
+338	Pika	KenyiK	Marth	Charlie	2
+
+N9J_hl-Q8mE	2019-06-22	N	New Generation|LATAM|1.1.0.1	
+6	Pika	Dayer	Bowser	Alexio	1
+253	Pika	Dayer	Ichigo	Alexio	2
+481	Pika	Dayer	Ichigo	Alexio	1
+
+dcOUiSFVFT8	2019-06-11	N	New Generation|LATAM|1.1.0.1	
+7	Ichigo	Diaquz	Pika	Dayer	1
+157	Bbm	Diaquz	Pika	Dayer	1
+394	Falco	Diaquz	Pika	Dayer	1
+
+DErlY60t1fo	2019-06-22	N	New Generation|LATAM|1.1.0.1	
+8	Mario	Fario	Bowser	Alexio	1
+247	Naruto	Fario	Bowser	Alexio	2
+467	Sora	Fario	Bowser	Alexio	2
+644	Mario	Fario	Bowser	Alexio	2
+
+LsN2gNubf1o	2019-06-22	N	New Generation|LATAM|1.1.0.1	
+6	Pika	Dayer	Bowser	Alexio	2
+230	Pika	Dayer	Bowser	Alexio	2
+468	Pika	Dayer	Bowser	Alexio	2
+
+_H9D00-2fK8	2019-06-22	L	New Generation|LATAM|1.1.0.1	
+6	Bowser	Diaquz	Bowser	Alexio	1
+200	Luffy	Diaquz	Chibi	Alexio	2
+430	Dk	Diaquz	Chibi	Alexio	1
+576	Ness	Diaquz	Bm	Alexio	1
+
+CK0cor7bkr0	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+4	Zss	MT402	Sonic	Powtter (Gonzero)	1
+209	Zss	MT402	Ray	Powtter (Gonzero)	1
+499	Zss	MT402	Gnw	Powtter (Gonzero)	2
+717	Zss	MT402	Gnw	Powtter (Gonzero)	2
+
+0mUOXN1kkbY	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+7	Ness	Drarky	Mk	Gat	2
+305	Lloyd	Drarky	Mk	Gat	1
+631	Tails	Drarky	Mk	Gat	1
+946	Bbm	Drarky	Mk	Gat	2
+1192	Chibi	Drarky	Mk	Gat	1
+
+0tGYcOCn3io	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+10	Luffy	KenyiK	Bm	Diaquz	2
+345	Sora	KenyiK	Bm	Diaquz	1
+600	Sora	KenyiK	Wario	Diaquz	1
+850	Sora	KenyiK	Marth	Diaquz	1
+
+6hDawfDN7no	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+5	Ganon	Konfapooch (Astral/Eikeshuu)	Dk	Kastel (Marquin)	1
+143	Ganon	Konfapooch (Astral/Eikeshuu)	Dk	Kastel (Marquin)	1
+328	Ganon	Konfapooch (Astral/Eikeshuu)	Ness	Kastel (Marquin)	1
+
+U7ymN0Ob-Vw	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+4	Luigi	Diaquz	Mk	Powtter (Gonzero)	1
+196	Kirby	Diaquz	Naruto	Powtter (Gonzero)	1
+392	Zelda	Diaquz	Naruto	Powtter (Gonzero)	2
+668	Tails	Diaquz	Naruto	Powtter (Gonzero)	2
+869	Sora	Diaquz	Naruto	Powtter (Gonzero)	1
+
+Nlm27namtr4	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+7	Link	Drarky	Samus	Kastel (Marquin)	2
+211	Bdee	Drarky	Samus	Kastel (Marquin)	2
+470	Bm	Drarky	Samus	Kastel (Marquin)	1
+744	Bm	Drarky	Samus	Kastel (Marquin)	2
+
+M_O6OpvM7oc	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+7	Ganon	Konfapooch (Astral/Eikeshuu)	Isaac	KenyiK	1
+244	Ganon	Konfapooch (Astral/Eikeshuu)	Isaac	KenyiK	2
+528	Ganon	Konfapooch (Astral/Eikeshuu)	Sora	KenyiK	2
+743	Cf	Konfapooch (Astral/Eikeshuu)	Sora	KenyiK	1
+963	Cf	Konfapooch (Astral/Eikeshuu)	Sora	KenyiK	1
+
+g_guiXuSffg	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+5	Gnw	Diaquz	Samus	Kastel (Marquin)	1
+181	Gnw	Diaquz	Samus	Kastel (Marquin)	1
+425	Gnw	Diaquz	Samus	Kastel (Marquin)	2
+544	Gnw	Diaquz	Samus	Kastel (Marquin)	1
+
+CPT5gDlsYBw	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+8	Fox	Diaquz	Luffy	KenyiK	2
+208	Fox	Diaquz	Sora	KenyiK	2
+397	Wario	Diaquz	Isaac	KenyiK	2
+
+iFEC_pY39lg	2024-06-30	N	No More Rocketto|LATAM|1.3.2	
+6	Cf	Konfapooch (Astral/Eikeshuu)	Isaac	KenyiK	1
+258	Cf	Konfapooch (Astral/Eikeshuu)	Luffy	KenyiK	1
+433	Cf	Konfapooch (Astral/Eikeshuu)	Sora	KenyiK	2
+623	Cf	Konfapooch (Astral/Eikeshuu)	Sora	KenyiK	1
+
+yCvIISHM5Pc	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+0	Sonic	Artmagic	Ryu	GabrielKof	1
+237	Sonic	Artmagic	Ryu	GabrielKof	2
+576	Sonic	Artmagic	Ryu	GabrielKof	1
+
+6odM9_R7L6M	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+7	Sheik	Guada	Isaac	Chimo	2
+424	Sheik	Guada	Isaac	Chimo	2
+
+4WI6pAFx6jM	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+1	Lucario	Hitmorner	Bm	Drarky	1
+219	Lucario	Hitmorner	Bm	Drarky	1
+
+72_QW9Rac7g	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Luigi	Danii	Bm	Kastel (Marquin)	2
+254	Luigi	Danii	Bm	Kastel (Marquin)	2
+
+NycFC_Nk1QI	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Luigi	Danii	Isaac	Chimo	1
+390	Luigi	Danii	Isaac	Chimo	1
+
+0vw4CGJ77-A	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+1	Sonic	Artmagic	Link	Powtter (Gonzero)	1
+266	Sonic	Artmagic	Link	Powtter (Gonzero)	1
+
+y4bgEq8ug_k	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Luigi	Danii	Cf	Santiago	2
+310	Luigi	Danii	Cf	Santiago	2
+638	Luigi	Danii	Waluigi	Santiago	1
+1012	Luigi	Danii	Cf	Santiago	2
+
+ZVdhj9W9jsg	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+1	Sonic	Artmagic	Mk	Gat	1
+276	Sonic	Artmagic	Mk	Gat	2
+492	Sonic	Artmagic	Mk	Gat	2
+773	Sonic	Artmagic	Mk	Gat	2
+
+sXIK-ASZZ9s	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Sonic	Briamty289	Lloyd	Diaquz	2
+237	Sonic	Briamty289	Puff	Diaquz	1
+544	Marth	Briamty289	Marth	Diaquz	2
+784	Marth	Briamty289	Ichigo	Diaquz	2
+
+z00S_Ys5CQo	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Lucario	Hitmorner	Bm	Kastel (Marquin)	1
+373	Lucario	Hitmorner	Bm	Kastel (Marquin)	2
+622	Lucario	Hitmorner	Bm	Kastel (Marquin)	2
+789	Lucario	Hitmorner	Bm	Kastel (Marquin)	2
+
+1Yoo2cB9lG8	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Bag	Briamty289	Waluigi	Santiago	1
+179	Marth	Briamty289	Chibi	Santiago	2
+407	Dk	Briamty289	Naruto	Santiago	2
+638	Sonic	Briamty289	Bowser	Santiago	1
+855	Gnw	Briamty289	Cf	Santiago	1
+
+it1ov2kDKsQ	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+3	Lucario	Hitmorner	Mk	Gat	1
+221	Lucario	Hitmorner	Mk	Gat	1
+523	Lucario	Hitmorner	Mk	Gat	2
+832	Lucario	Hitmorner	Mk	Gat	1
+
+dwMSOlLTFXU	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Simon	Kastel (Marquin)	Fox	Diaquz	1
+245	Simon	Kastel (Marquin)	Isaac	Diaquz	2
+542	Simon	Kastel (Marquin)	Isaac	Diaquz	1
+811	Simon	Kastel (Marquin)	Link	Diaquz	2
+1052	Simon	Kastel (Marquin)	Link	Diaquz	1
+
+69IqH94Z9gI	2022-08-15	N	Monte Sunday Series|LATAM|1.3.2	
+3	Bm	Diaquz	Gnw	Briamty289	2
+191	Ichigo	Diaquz	Gnw	Briamty289	1
+382	Bbm	Diaquz	Gnw	Briamty289	1
+590	Ichigo	Diaquz	Sonic	Briamty289	1
+
+73whGtoZiHA	2022-08-14	N	Monte Sunday Series|LATAM|1.3.2	
+2	Simon	Kastel (Marquin)	Link	Diaquz	1
+241	Simon	Kastel (Marquin)	Luffy	Diaquz	2
+510	Simon	Kastel (Marquin)	Luffy	Diaquz	1
+780	Simon	Kastel (Marquin)	Luffy	Diaquz	1
+
+PzmbVrx3S3s	2025-11-28	N	SUMMIT|LATAM|1.4	
+672	Chibi	ThePikaPlayer	Wario	Samisyeps	2
+989	Chibi	ThePikaPlayer	Wario	Samisyeps	1
+1337	Chibi	ThePikaPlayer	Wario	Samisyeps	1
+1634	Chibi	ThePikaPlayer	Wario	Samisyeps	2
+1836	Chibi	ThePikaPlayer	Wario	Samisyeps	2
+1967	Mk	Gat	Gnw	Barrilito	1
+2203	Mk	Gat	ddd	Barrilito	1
+2517	Mk	Gat	Gnw	Barrilito	2
+3013	Mk	Gat	Gnw	Barrilito	2
+3399	Mk	Gat	Gnw	Barrilito	2
+3820	Link	SrB	Chibi	ThePikaPlayer	1
+4153	Link	SrB	Chibi	ThePikaPlayer	1
+4352	Link	SrB	Chibi	ThePikaPlayer	2
+4638	Link	SrB	Chibi	ThePikaPlayer	2
+4913	Link	SrB	Chibi	ThePikaPlayer	1
+5504	Wario	Samisyeps	Mk	Gat	1
+5805	Wario	Samisyeps	Mk	Gat	2
+5974	Wario	Samisyeps	Mk	Gat	1
+6210	Wario	Samisyeps	Mk	Gat	1
+6502	Link	SrB	Gnw	Barrilito	2
+6969	Link	SrB	Gnw	Barrilito	2
+7457	Link	SrB	Gnw	Barrilito	2
+7875	Mk	Gat	Chibi	ThePikaPlayer	2
+8253	Ray	Gat	Chibi	ThePikaPlayer	2
+8513	Mk	Gat	Chibi	ThePikaPlayer	2
+8902	Wario	Samisyeps	Gnw	Barrilito	2
+9100	Wario	Samisyeps	Gnw	Barrilito	2
+9376	Wario	Samisyeps	Gnw	Barrilito	2
+9731	Link	SrB	Mk	Gat	1
+9907	Link	SrB	Mk	Gat	2
+10203	Link	SrB	Mk	Gat	1
+10365	Link	SrB	Mk	Gat	1
+10655	Chibi	ThePikaPlayer	Gnw	Barrilito	1
+11009	Chibi	ThePikaPlayer	Gnw	Barrilito	1
+11485	Chibi	ThePikaPlayer	Gnw	Barrilito	1
+11691	Link	SrB	Wario	Samisyeps	1
+12038	Link	SrB	Wario	Samisyeps	1
+12232	Link	SrB	Wario	Samisyeps	1
+12758	ddd	Flamire	Goku	Kastel (Marquin)	2
+13042	ddd	Flamire	Goku	Kastel (Marquin)	1
+13316	ddd	Flamire	Goku	Kastel (Marquin)	1
+13620	ddd	Flamire	Goku	Kastel (Marquin)	1
+13972	Ichigo	KiuroZ	Wario	Waldo	2
+14199	Ichigo	KiuroZ	Wario	Waldo	1
+14480	Ichigo	KiuroZ	Wario	Waldo	2
+14737	Ichigo	KiuroZ	Wario	Waldo	1
+14938	Ichigo	KiuroZ	Wario	Waldo	2
+15144	ddd	Flamire	Samus	MT402	1
+15404	ddd	Flamire	Samus	MT402	1
+15701	ddd	Flamire	Zss	MT402	1
+16039	Ichigo	KiuroZ	Goku	Kastel (Marquin)	2
+16285	Ichigo	KiuroZ	Goku	Kastel (Marquin)	2
+16475	Ichigo	KiuroZ	Goku	Kastel (Marquin)	1
+16745	Ichigo	KiuroZ	Goku	Kastel (Marquin)	1
+17030	Ichigo	KiuroZ	Goku	Kastel (Marquin)	2
+17229	Wario	Waldo	ddd	Flamire	2
+17441	Wario	Waldo	ddd	Flamire	2
+17686	Wario	Waldo	ddd	Flamire	1
+17945	Wario	Waldo	ddd	Flamire	2
+18265	Ichigo	KiuroZ	Zss	MT402	1
+18453	Ichigo	KiuroZ	Naruto	MT402	1
+18682	Ichigo	KiuroZ	Naruto	MT402	2
+18952	Ichigo	KiuroZ	Naruto	MT402	1
+19273	Goku	Kastel (Marquin)	Wario	Waldo	1
+19493	Goku	Kastel (Marquin)	Wario	Waldo	1
+19664	Goku	Kastel (Marquin)	Wario	Waldo	1
+19964	Wario	Waldo	Naruto	MT402	1
+20138	Wario	Waldo	Naruto	MT402	2
+20385	Wario	Waldo	Naruto	MT402	1
+20573	Wario	Waldo	Naruto	MT402	1
+20885	Ichigo	KiuroZ	ddd	Flamire	2
+21328	Luigi	KiuroZ	Gnw	Flamire	2
+21468	Luigi	KiuroZ	ddd	Flamire	1
+21965	Luigi	KiuroZ	ddd	Flamire	2
+
+9uaj6h6LtWk	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Bag	Diaquz	Ichigo	KiuroZ	2
+235	Tails	Diaquz	Ichigo	KiuroZ	2
+602	Ichigo	Diaquz	Ichigo	KiuroZ	2
+
+5RY-CpTwCU4	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+5	Yoshi	VaporeyeZ	Bowser	Kastel (Marquin)	1
+223	Yoshi	VaporeyeZ	Bowser	Kastel (Marquin)	2
+446	Yoshi	VaporeyeZ	Bowser	Kastel (Marquin)	2
+661	Yoshi	VaporeyeZ	Bowser	Kastel (Marquin)	2
+
+5KfiguR_RNg	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Link	SrB	Lloyd	Sushi	1
+276	Link	SrB	Lloyd	Sushi	1
+476	Link	SrB	Lloyd	Sushi	1
+
+sYW_CO9AZGM	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+3	Lloyd	VaporeyeZ	Lloyd	Sushi	2
+206	Lloyd	VaporeyeZ	Lloyd	Sushi	2
+413	Lloyd	VaporeyeZ	Lloyd	Sushi	2
+
+78fnNTFAoIs	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+7	Link	SrB	Bowser	Kastel (Marquin)	1
+237	Link	SrB	Bowser	Kastel (Marquin)	1
+424	Link	SrB	Bowser	Kastel (Marquin)	1
+
+yX5krK67fRg	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Mk	Gat	Samus	MT402	1
+250	Mk	Gat	Samus	MT402	1
+485	Mk	Gat	Zss	MT402	2
+816	Mk	Gat	Zss	MT402	1
+
+fp1DYP_fSmo	2025-11-29	N	SUMMIT|LATAM|1.4	
+621	Sonic	Wh1te_Chapel (Nessus)	Samus	LuisPPM	1
+894	Sonic	Wh1te_Chapel (Nessus)	Samus	LuisPPM	2
+1185	Bowser	Wh1te_Chapel (Nessus)	Samus	LuisPPM	1
+1548	Bowser	Wh1te_Chapel (Nessus)	Samus	LuisPPM	2
+1858	Bowser	Wh1te_Chapel (Nessus)	Samus	LuisPPM	1
+2282	Zelda	EdgarBlink	Ness	Arcaico (PixelBot)	2
+2507	Zss	EdgarBlink	Ness	Arcaico (PixelBot)	1
+2845	Zss	EdgarBlink	Ness	Arcaico (PixelBot)	1
+3131	Zss	EdgarBlink	Ness	Arcaico (PixelBot)	1
+3450	Bowser	Wh1te_Chapel (Nessus)	Waluigi	Ggfoscar	1
+3752	Bowser	Wh1te_Chapel (Nessus)	Waluigi	Ggfoscar	1
+4021	Bowser	Wh1te_Chapel (Nessus)	Waluigi	Ggfoscar	1
+4440	Ness	Arcaico (PixelBot)	Samus	LuisPPM	2
+4717	Ness	Arcaico (PixelBot)	Samus	LuisPPM	1
+5069	Ness	Arcaico (PixelBot)	Samus	LuisPPM	2
+5445	Ness	Arcaico (PixelBot)	Samus	LuisPPM	2
+5836	Zelda	EdgarBlink	Wario	Ggfoscar	2
+6116	Zelda	EdgarBlink	Wario	Ggfoscar	1
+6316	Zelda	EdgarBlink	Wario	Ggfoscar	1
+6733	Zelda	EdgarBlink	Wario	Ggfoscar	1
+7004	Ness	Arcaico (PixelBot)	Bowser	Wh1te_Chapel (Nessus)	2
+7247	Ness	Arcaico (PixelBot)	Bowser	Wh1te_Chapel (Nessus)	2
+7476	Ness	Arcaico (PixelBot)	Bowser	Wh1te_Chapel (Nessus)	2
+7726	Zelda	EdgarBlink	Samus	LuisPPM	1
+8043	Zss	EdgarBlink	Samus	LuisPPM	1
+8289	Zss	EdgarBlink	Samus	LuisPPM	2
+8590	Zss	EdgarBlink	Samus	LuisPPM	1
+8924	Waluigi	Ggfoscar	Ness	Arcaico (PixelBot)	2
+9153	Waluigi	Ggfoscar	Ness	Arcaico (PixelBot)	1
+9520	Waluigi	Ggfoscar	Ness	Arcaico (PixelBot)	2
+9739	Waluigi	Ggfoscar	Ness	Arcaico (PixelBot)	2
+9954	Zelda	EdgarBlink	Sonic	Wh1te_Chapel (Nessus)	2
+10228	Zelda	EdgarBlink	Sonic	Wh1te_Chapel (Nessus)	2
+10523	Zelda	EdgarBlink	Sonic	Wh1te_Chapel (Nessus)	1
+10764	Zelda	EdgarBlink	Bowser	Wh1te_Chapel (Nessus)	1
+10981	Zelda	EdgarBlink	Bowser	Wh1te_Chapel (Nessus)	2
+11266	Wario	Ggfoscar	Samus	LuisPPM	1
+11489	Wario	Ggfoscar	Samus	LuisPPM	1
+11774	Wario	Ggfoscar	Samus	LuisPPM	1
+12246	Chibi	Ryukah	Marth	Mariofeeh	1
+12554	Chibi	Ryukah	Marth	Mariofeeh	1
+12754	Chibi	Ryukah	Lloyd	Mariofeeh	1
+12983	Bag	Diaquz	Goku	GabrielKof	1
+13117	Bag	Diaquz	Goku	GabrielKof	2
+13285	Bag	Diaquz	Goku	GabrielKof	1
+13403	Wario	Diaquz	Goku	GabrielKof	2
+13592	Bag	Diaquz	Goku	GabrielKof	2
+13839	Marth	Mariofeeh	Lucario	LMGraffity	2
+14060	Lloyd	Mariofeeh	Lucario	LMGraffity	2
+14410	Lloyd	Mariofeeh	Lucario	LMGraffity	2
+14656	Chibi	Ryukah	Ryu	GabrielKof	2
+14943	Chibi	Ryukah	Goku	GabrielKof	2
+15126	Chibi	Ryukah	Ryu	GabrielKof	1
+15388	Chibi	Ryukah	Goku	GabrielKof	2
+15739	Lucario	LMGraffity	Sonic	Diaquz	1
+16030	Lucario	LMGraffity	Marth	Diaquz	1
+16329	Lucario	LMGraffity	Waluigi	Diaquz	2
+16573	Lucario	LMGraffity	Waluigi	Diaquz	1
+16965	Marth	Mariofeeh	Goku	GabrielKof	2
+17212	Fox	Mariofeeh	Ryu	GabrielKof	2
+17433	Fox	Mariofeeh	Ryu	GabrielKof	2
+17774	Sonic	Diaquz	Chibi	Ryukah	1
+18085	Sonic	Diaquz	Chibi	Ryukah	1
+18421	Sonic	Diaquz	Chibi	Ryukah	2
+18680	Luffy	Diaquz	Chibi	Ryukah	2
+18865	Sonic	Diaquz	Chibi	Ryukah	1
+19265	Lucario	LMGraffity	Ryu	GabrielKof	1
+19550	Lucario	LMGraffity	Ryu	GabrielKof	2
+19782	Lucario	LMGraffity	Ryu	GabrielKof	1
+20049	Lucario	LMGraffity	Ryu	GabrielKof	2
+20356	Lucario	LMGraffity	Ryu	GabrielKof	1
+20714	Marth	Mariofeeh	Wario	Diaquz	2
+20942	Marth	Mariofeeh	Bag	Diaquz	2
+21097	Marth	Mariofeeh	Bag	Diaquz	1
+21290	Marth	Mariofeeh	Wario	Diaquz	2
+21630	Chibi	Ryukah	Lucario	LMGraffity	1
+21989	Chibi	Ryukah	Lucario	LMGraffity	1
+22289	Chibi	Ryukah	Lucario	LMGraffity	2
+22579	Chibi	Ryukah	Lucario	LMGraffity	1
+23558	Bowser	Wh1te_Chapel (Nessus)	Goku	GabrielKof	1
+23813	Bowser	Wh1te_Chapel (Nessus)	Goku	GabrielKof	1
+24036	Bowser	Wh1te_Chapel (Nessus)	Ryu	GabrielKof	1
+24456	Link	SrB	ddd	Flamire	2
+24806	Link	SrB	ddd	Flamire	1
+25070	Link	SrB	ddd	Flamire	2
+25425	Link	SrB	ddd	Flamire	1
+25764	Link	SrB	ddd	Flamire	2
+26060	Zss	EdgarBlink	Lucario	LMGraffity	2
+26340	Zss	EdgarBlink	Lucario	LMGraffity	2
+26615	Zss	EdgarBlink	Lucario	LMGraffity	2
+27179	Goku	GabrielKof	Bag	Diaquz	2
+27361	Goku	GabrielKof	Bag	Diaquz	2
+27518	Ryu	GabrielKof	Bag	Diaquz	1
+27693	Ryu	GabrielKof	Bbm	Diaquz	2
+28255	Zss	EdgarBlink	Samus	LuisPPM	2
+28521	Zss	EdgarBlink	Samus	LuisPPM	2
+28815	Zss	EdgarBlink	Samus	LuisPPM	2
+
+ClpOsV5aGjQ	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+5	Luffy	KenyiK	Ryu	GabrielKof	2
+286	Luffy	KenyiK	Ryu	GabrielKof	1
+598	Luffy	KenyiK	Ryu	GabrielKof	1
+889	Luffy	KenyiK	Ryu	GabrielKof	1
+
+mJSi0xrwVh4	2022-05-28	N	Betaversary|LATAM|1.3.2	
+0	Ichigo	Diaquz	Naruto	Briamty289	1
+173	Link	Diaquz	Bag	Briamty289	1
+397	Bowser	Diaquz	Ryu	Briamty289	2
+595	Lloyd	Diaquz	Marth	Briamty289	1
+
+j801tyZZZFQ	2022-05-28	N	Betaversary|LATAM|1.3.2	
+3	Lucario	Hitmorner	Sora	Mariofeeh	2
+296	Lucario	Hitmorner	Sora	Mariofeeh	1
+492	Lucario	Hitmorner	Lloyd	Mariofeeh	1
+750	Lucario	Hitmorner	Sora	Mariofeeh	1
+
+L_-U761K75M	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+6	Gnw	Barrilito	Wario	Samisyeps	1
+369	Gnw	Barrilito	Wario	Samisyeps	2
+724	Gnw	Barrilito	Wario	Samisyeps	2
+1050	Gnw	Barrilito	Wario	Samisyeps	1
+1374	Gnw	Barrilito	Wario	Samisyeps	1
+
+WhBMwwOORQE	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+3	Mk	Diaquz	Zss	EdgarBlink	2
+409	Wario	Diaquz	Zss	EdgarBlink	1
+630	Goku	Diaquz	Zelda	EdgarBlink	2
+824	Ichigo	Diaquz	Zelda	EdgarBlink	1
+1081	Sora	Diaquz	Zelda	EdgarBlink	1
+
+yo5OuhbJ6_Q	2022-05-28	N	Betaversary|LATAM|1.3.2	
+2	Wario	Diaquz	Lucario	Hitmorner	2
+221	Luffy	Diaquz	Lucario	Hitmorner	1
+357	Waluigi	Diaquz	Lucario	Hitmorner	1
+588	Luffy	Diaquz	Lucario	Hitmorner	1
+
+GLLioG1X72s	2025-11-30	N	SUMMIT|LATAM|1.4	
+1546	Link	SrB	Samus	LuisPPM	1
+1862	Link	SrB	Samus	LuisPPM	2
+2153	Link	SrB	Samus	LuisPPM	2
+2583	Link	SrB	Samus	LuisPPM	2
+3073	Wario	Diaquz	Wario	Waldo	1
+3263	Wario	Diaquz	Wario	Waldo	1
+3443	Bm	Diaquz	Wario	Waldo	1
+3732	Goku	Kastel (Marquin)	Bowser	Wh1te_Chapel (Nessus)	1
+3894	Goku	Kastel (Marquin)	Bowser	Wh1te_Chapel (Nessus)	1
+4107	Goku	Kastel (Marquin)	Bowser	Wh1te_Chapel (Nessus)	1
+4345	ddd	Flamire	Lucario	LMGraffity	1
+4691	ddd	Flamire	Lucario	LMGraffity	1
+4981	ddd	Flamire	Lucario	LMGraffity	1
+5442	Samus	LuisPPM	Sonic	Wh1te_Chapel (Nessus)	2
+5821	Samus	LuisPPM	Bowser	Wh1te_Chapel (Nessus)	2
+6073	Samus	LuisPPM	Bowser	Wh1te_Chapel (Nessus)	1
+6354	Samus	LuisPPM	Bowser	Wh1te_Chapel (Nessus)	1
+6708	Samus	LuisPPM	Bowser	Wh1te_Chapel (Nessus)	2
+7051	Lucario	LMGraffity	ddd	Diaquz	2
+7331	Lucario	LMGraffity	ddd	Diaquz	1
+7538	Lucario	LMGraffity	Wario	Diaquz	2
+7718	Lucario	LMGraffity	Wario	Diaquz	2
+10467	Goku	Kastel (Marquin)	ddd	Flamire	1
+10712	Goku	Kastel (Marquin)	ddd	Flamire	1
+10948	Goku	Kastel (Marquin)	ddd	Flamire	2
+11223	Goku	Kastel (Marquin)	ddd	Flamire	1
+11563	Bowser	Wh1te_Chapel (Nessus)	Bbm	Diaquz	2
+11840	Bowser	Wh1te_Chapel (Nessus)	Wario	Diaquz	1
+12109	Bowser	Wh1te_Chapel (Nessus)	Sora	Diaquz	2
+12390	Bowser	Wh1te_Chapel (Nessus)	Bbm	Diaquz	2
+12585	ddd	Flamire	Wario	Diaquz	2
+12796	ddd	Flamire	Wario	Diaquz	2
+13177	ddd	Flamire	Wario	Diaquz	1
+13454	ddd	Flamire	Wario	Diaquz	1
+13713	ddd	Flamire	Wario	Diaquz	2
+14168	Bag	Diaquz	Goku	Kastel (Marquin)	1
+14318	Bag	Diaquz	Goku	Kastel (Marquin)	2
+14463	Bag	Diaquz	Goku	Kastel (Marquin)	1
+14596	Bag	Diaquz	Goku	Kastel (Marquin)	2
+14744	Bag	Diaquz	Goku	Kastel (Marquin)	1
+14976	Bag	Diaquz	Goku	Kastel (Marquin)	1
+15104	Bag	Diaquz	Goku	Kastel (Marquin)	1
+15244	Bag	Diaquz	Goku	Kastel (Marquin)	1
+
+pqAGaUv-OGY	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Zss	EdgarBlink	Wario	Samisyeps	1
+316	Zss	EdgarBlink	Wario	Samisyeps	2
+674	Zelda	EdgarBlink	Wario	Samisyeps	1
+946	Zelda	EdgarBlink	Wario	Samisyeps	1
+
+UnwVWR5nNrw	2022-05-28	N	Betaversary|LATAM|1.3.2	
+0	Bag	Lucio	Lucario	Kriggo	1
+330	Lloyd	Lucio	Lucario	Kriggo	1
+620	Link	Lucio	Lucario	Kriggo	2
+1005	Wario	Lucio	Lucario	Kriggo	1
+
+fSnBI84ZujQ	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Gnw	Barrilito	Isaac	Diaquz	2
+284	Gnw	Barrilito	Falco	Diaquz	2
+549	Gnw	Barrilito	Falco	Diaquz	2
+
+bwSpRijvdyU	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+3	Sonic	KenyiK	Mk	Gat	1
+344	Sora	KenyiK	Mk	Gat	1
+722	Sora	KenyiK	Mk	Gat	1
+
+wk6VqvQX1uY	2022-05-28	N	Betaversary|LATAM|1.3.2	
+0	Sora	Mariofeeh	Lloyd	Lucio	1
+228	Sora	Mariofeeh	Tails	Lucio	1
+465	Sora	Mariofeeh	Wario	Lucio	2
+870	Sora	Mariofeeh	Wario	Lucio	1
+
+eic1Ar3OUsI	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+5	Gnw	Barrilito	Zelda	EdgarBlink	1
+308	Gnw	Barrilito	Zelda	EdgarBlink	1
+621	Gnw	Barrilito	Zelda	EdgarBlink	1
+
+oEVy5nXr5f8	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+5	Wario	Samisyeps	Bag	Diaquz	2
+158	Wario	Samisyeps	Fox	Diaquz	2
+332	Wario	Samisyeps	Lloyd	Diaquz	2
+
+JHffulFrXjo	2022-05-28	N	Betaversary|LATAM|1.3.2	
+0	Sonic	Briamty289	Isaac	Chimo	1
+309	Isaac	Chimo	Marth	Briamty289	2
+576	Isaac	Chimo	Gnw	Briamty289	2
+
+okVHkAnjhHI	2022-05-28	N	Betaversary|LATAM|1.3.2	
+1	Lucario	Hitmorner	Sora	Mariofeeh	2
+256	Lucario	Hitmorner	Sora	Mariofeeh	1
+560	Lucario	Hitmorner	Sora	Mariofeeh	1
+877	Lucario	Hitmorner	Sora	Mariofeeh	1
+
+igT9mL68O0Y	2022-05-28	N	Betaversary|LATAM|1.3.2	
+3	Ganon	Diaquz	Lucario	Hitmorner	2
+191	Isaac	Diaquz	Lucario	Hitmorner	1
+489	Bm	Diaquz	Lucario	Hitmorner	2
+752	Ichigo	Diaquz	Lucario	Hitmorner	2
+946	Luffy	Diaquz	Lucario	Hitmorner	1
+1212	Luffy	Diaquz	Lucario	Hitmorner	1
+1556	Luffy	Diaquz	Lucario	Hitmorner	1
+
+_d6LT38LGfA	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+2	Bag	Rs	Link	Powtter (Gonzero)	1
+152	Sonic	Rs	Naruto	Powtter (Gonzero)	1
+455	Sora	Rs	Sora	Powtter (Gonzero)	1
+
+Eqkx2Lz1WAM	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+2	Ichigo	KiuroZ	Samus	LuisPPM	1
+330	Pichu	KiuroZ	Samus	LuisPPM	1
+606	Ichigo	KiuroZ	Samus	LuisPPM	1
+
+VLubZAcG6uQ	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Ichigo	KiuroZ	Sonic	Powtter (Gonzero)	2
+288	Ichigo	KiuroZ	Sonic	Powtter (Gonzero)	1
+546	Ichigo	KiuroZ	Sora	Powtter (Gonzero)	2
+757	Ichigo	KiuroZ	Sora	Powtter (Gonzero)	2
+
+VqFsghUg0Ug	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+3	Gnw	Rs	Samus	LuisPPM	1
+325	Gnw	Rs	Samus	LuisPPM	1
+647	Sora	Rs	Samus	LuisPPM	1
+
+6vkhtREaxEY	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Sora	Powtter (Gonzero)	Samus	LuisPPM	1
+209	Sora	Powtter (Gonzero)	Samus	LuisPPM	1
+466	Sora	Powtter (Gonzero)	Samus	LuisPPM	1
+
+5QWffQReIHA	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Ichigo	KiuroZ	Bag	Rs	1
+229	Ichigo	KiuroZ	Zss	Rs	1
+481	Ichigo	KiuroZ	Lloyd	Rs	2
+665	Ichigo	KiuroZ	Zss	Rs	1
+
+f2POkUrO5Dc	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Lloyd	Sushi	Bowser	Kastel (Marquin)	1
+202	Lloyd	Sushi	Bowser	Kastel (Marquin)	2
+383	Lloyd	Sushi	Bowser	Kastel (Marquin)	2
+546	Lloyd	Sushi	Bowser	Kastel (Marquin)	2
+
+irZ8uOYU47E	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+2	Zss	MT402	Ryu	GabrielKof	1
+297	Zss	MT402	Ryu	GabrielKof	1
+582	Zss	MT402	Ryu	GabrielKof	1
+
+apKRaZy477E	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Wario	MT402	Lloyd	KenyiK	1
+258	Wario	MT402	Sora	KenyiK	2
+435	Zss	MT402	Isaac	KenyiK	2
+692	Zss	MT402	Lloyd	KenyiK	2
+
+YJKIIXP4cGE	2024-12-13	L	SUMMIT|LATAM|1.3.2	
+4	Ryu	GabrielKof	Mk	Gat	2
+240	Goku	GabrielKof	Mk	Gat	1
+608	Goku	GabrielKof	Mk	Gat	1
+843	Goku	GabrielKof	Mk	Gat	1
+
+G5orf5FYki8	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+3	Ichigo	KenyiK	Gnw	Rs	2
+314	Sonic	KenyiK	Gnw	Rs	1
+566	Sonic	KenyiK	Sora	Rs	1
+844	Sonic	KenyiK	Sora	Rs	1
+
+Z-vWG-ldWwc	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+6	Gnw	Rs	Gnw	Barrilito	1
+192	Gnw	Rs	Lloyd	Barrilito	2
+484	Gnw	Rs	Gnw	Barrilito	1
+622	Gnw	Rs	Lloyd	Barrilito	1
+
+ELzYJISyaOY	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+3	Gnw	Barrilito	Isaac	KenyiK	2
+264	Gnw	Barrilito	Isaac	KenyiK	2
+498	Gnw	Barrilito	Isaac	KenyiK	2
+
+XBxYKUVhclA	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+5	Sora	Rs	Link	SrB	2
+347	Sora	Rs	Link	SrB	1
+537	Sora	Rs	Link	SrB	1
+713	Sora	Rs	Link	SrB	1
+
+tDcZup5q5r4	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+3	Bag	Rs	Ichigo	KiuroZ	1
+190	Bag	Rs	Ichigo	KiuroZ	2
+388	Sora	Rs	Ichigo	KiuroZ	2
+565	Sora	Rs	Ichigo	KiuroZ	1
+768	Gnw	Rs	Ichigo	KiuroZ	1
+
+8gCc-Dy2RLk	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+6	Marth	Diaquz	Link	SrB	2
+174	Lloyd	Diaquz	Link	SrB	1
+364	Lloyd	Diaquz	Link	SrB	2
+591	Ichigo	Diaquz	Link	SrB	2
+
+yVxYr0nqSIU	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Link	SrB	Gnw	Barrilito	2
+333	Link	SrB	Gnw	Barrilito	2
+751	Link	SrB	Gnw	Barrilito	2
+
+8jctH8FDQZY	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Sora	KenyiK	Ichigo	KiuroZ	2
+311	Luffy	KenyiK	Ichigo	KiuroZ	1
+548	Luffy	KenyiK	Ichigo	KiuroZ	1
+709	Luffy	KenyiK	Ichigo	KiuroZ	1
+
+E_n7LFHT6lQ	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+6	Gnw	Rs	Wario	MT402	1
+224	Gnw	Rs	Zss	MT402	1
+498	Gnw	Rs	Zss	MT402	1
+
+pEBcMzbWWr4	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+5	Sora	Diaquz	Bowser	Kastel (Marquin)	1
+217	Sora	Diaquz	Bowser	Kastel (Marquin)	2
+422	Sora	Diaquz	Bowser	Kastel (Marquin)	1
+565	Sora	Diaquz	Bowser	Kastel (Marquin)	1
+
+zZHJJITnyfg	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+6	Link	SrB	Zss	MT402	1
+276	Link	SrB	Zss	MT402	2
+519	Link	SrB	Zss	MT402	2
+788	Link	SrB	Zss	MT402	1
+1026	Link	SrB	Zss	MT402	1
+
+7XQlbPg1gWk	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+4	Isaac	Rs	Gnw	Barrilito	2
+508	Sora	Rs	Gnw	Barrilito	2
+897	Sora	Rs	Gnw	Barrilito	2
+
+PW6hRIviWWE	2024-12-13	N	SUMMIT|LATAM|1.3.2	
+2	Bm	KenyiK	Bowser	Kastel (Marquin)	2
+200	Gnw	KenyiK	Bowser	Kastel (Marquin)	1
+393	Isaac	KenyiK	Bowser	Kastel (Marquin)	1
+650	Sora	KenyiK	Bowser	Kastel (Marquin)	2
+921	Gnw	KenyiK	Bowser	Kastel (Marquin)	1
+
+MNLFYTnxqDo	2019-04-20	N	Hero Of Smash|LATAM|1.1.0.1	
+15	Luffy	NaitoMare(Smv)	Pac	AJHP (Lembruh/Alanweon)	2
+298	Bowser	NaitoMare(Smv)	Yoshi	AJHP (Lembruh/Alanweon)	2
+497	Luigi	NaitoMare(Smv)	Pika	AJHP (Lembruh/Alanweon)	2
+
+vDKQGl3oamw	2025-07-13	N	Flash Royale|LATAM|1.4	
+4	Waluigi	Ggfoscar	Samus	MT402	2
+252	Waluigi	Ggfoscar	Wario	MT402	2
+499	Waluigi	Ggfoscar	Naruto	MT402	1
+766	Waluigi	Ggfoscar	Naruto	MT402	2
+
+b_gKkxgEbrI	2020-04-18	N	Latin Nation Championship|LATAM|1.2.1	
+30	Waluigi	Spiderboy	Sonic	Enmanuel	1
+343	Simon	Dreik	Bdee	Gr0dh0p	2
+627	Simon	Dreik	Bdee	Gr0dh0p	1
+817	Marth	KenyiK	Ray	MaxQS	1
+1047	Marth	KenyiK	Sonic	MaxQS	1
+
+sesP0_V8f4I	2025-07-13	N	Flash Royale|LATAM|1.4	
+3	Gnw	Barrilito	Lucario	GabrielKof	1
+349	Gnw	Barrilito	Lucario	GabrielKof	2
+732	ddd	Barrilito	Lucario	GabrielKof	1
+
+o-BTb3ScSeI	2025-07-13	N	Flash Royale|LATAM|1.4	
+5	Mega	MintHerb	Ryu	GabrielKof	2
+319	Mega	MintHerb	Ryu	GabrielKof	2
+641	Mega	MintHerb	Goku	GabrielKof	1
+883	Mega	MintHerb	Goku	GabrielKof	2
+
+iSZ6rgrD8Js	2025-07-13	N	Flash Royale|LATAM|1.4	
+4	Naruto	MT402	Goku	GabrielKof	1
+189	Naruto	MT402	Goku	GabrielKof	1
+403	Naruto	MT402	Ryu	GabrielKof	2
+611	Naruto	MT402	Ryu	GabrielKof	1
+
+kaLzEjAAmGA	2025-07-13	N	Flash Royale|LATAM|1.4	
+5	Zelda	EdgarBlink	Naruto	MT402	2
+223	Zelda	EdgarBlink	Naruto	MT402	1
+468	Zelda	EdgarBlink	Naruto	MT402	2
+764	Zelda	EdgarBlink	Naruto	MT402	2
+1075	Zelda	EdgarBlink	Wario	MT402	1
+1318	Zelda	EdgarBlink	Wario	MT402	1
+1658	Zelda	EdgarBlink	Naruto	MT402	2
+1885	Zelda	EdgarBlink	Naruto	MT402	2
+2187	Zelda	EdgarBlink	Naruto	MT402	2
+
+1_qpMM-Dd1A	2020-04-18	N	Latin Nation Championship|LATAM|1.2.1	
+17	Sora	Lalito03	Mario	AJHP (Lembruh/Alanweon)	2
+289	Peach	Lalito03	Luigi	AJHP (Lembruh/Alanweon)	2
+568	Link	Lolchinovg	Bm	TheZenitsu (Keytman)	1
+890	Link	Lolchinovg	Ness	TheZenitsu (Keytman)	1
+1166	Simon	Dreik	Goku	River2-2	2
+1416	Simon	Dreik	Goku	River2-2	2
+
+oP8KX1NSAq0	2020-04-18	N	Latin Nation Championship|LATAM|1.2.1	
+16	Lloyd	Diaquz	Pit	JordyGamer	1
+169	Goku	Diaquz	Bdee	JordyGamer	1
+396	Link	DjVz	Lloyd	Mariofeeh	1
+642	Link	DjVz	Lloyd	Mariofeeh	2
+890	Link	DjVz	Lloyd	Mariofeeh	1
+1171	Puff	TheBlackEgg	Lloyd	Zxcas	2
+1409	Puff	TheBlackEgg	Lloyd	Zxcas	1
+1692	Puff	TheBlackEgg	Lloyd	Zxcas	2
+1904	Pika	KenyiK	Gnw	Briamty289	1
+2168	Lucario	KenyiK	Marth	Briamty289	1
+
+HBh4MESx4Zg	2022-05-08	N	Star KO|LATAM|1.3.2	
+742	Sora	Mariofeeh	Bag	Frankel	1
+928	Sora	Mariofeeh	Bbm	Frankel	1
+1129	Sora	Mariofeeh	Gnw	Frankel	1
+1452	Gnw	KiuroZ	Sora	VaporeyeZ	2
+1771	Gnw	KiuroZ	Sora	VaporeyeZ	2
+2071	Marth	KiuroZ	Sora	VaporeyeZ	2
+2404	Marth	Mariofeeh	Sora	VaporeyeZ	2
+2801	Ichigo	Mariofeeh	Sora	VaporeyeZ	1
+3074	Cf	Mariofeeh	Sora	VaporeyeZ	2
+3293	Sora	Mariofeeh	Sora	VaporeyeZ	2
+3722	Bdee	Cpt_Mango	Naruto	Naruto_303	2
+4063	Bdee	Cpt_Mango	Naruto	Naruto_303	1
+4465	Bdee	Cpt_Mango	Naruto	Naruto_303	2
+4916	Bdee	Cpt_Mango	Naruto	Naruto_303	2
+5360	Sonic	Enmanuel	Luigi	KiuroZ	2
+5762	Sonic	Enmanuel	Luigi	KiuroZ	2
+6092	Sonic	Enmanuel	Luigi	KiuroZ	1
+6402	Sonic	Enmanuel	Luigi	KiuroZ	1
+6776	Sonic	Enmanuel	Luigi	KiuroZ	1
+7278	Bag	Frankel	Naruto	Naruto_303	1
+7457	Bag	Frankel	Naruto	Naruto_303	1
+7709	Bag	Frankel	Waluigi	Naruto_303	1
+7891	Bag	Frankel	Sonic	Enmanuel	1
+8181	Bag	Frankel	Sonic	Enmanuel	1
+8343	Bag	Frankel	Waluigi	Enmanuel	2
+8796	Sora	Mariofeeh	Bag	Frankel	2
+8958	Sora	Mariofeeh	Bag	Frankel	1
+9305	Sora	Mariofeeh	Bag	Frankel	1
+9525	Sora	Mariofeeh	Bag	Frankel	1
+9851	Sora	VaporeyeZ	Fox	Mariofeeh	2
+10123	Sora	VaporeyeZ	Marth	Mariofeeh	1
+10372	Sora	VaporeyeZ	Marth	Mariofeeh	1
+10642	Sora	VaporeyeZ	Sora	Mariofeeh	1
+
+c3tdffpGMOs	2025-07-13	N	Flash Royale|LATAM|1.4	
+5	ddd	Flamire	Mega	MintHerb	1
+347	ddd	Flamire	Mega	MintHerb	1
+678	ddd	Flamire	Mega	MintHerb	2
+1013	ddd	Flamire	Mega	MintHerb	2
+1380	ddd	Flamire	Mega	MintHerb	2
+
+msWqd3PGSAo	2020-04-18	N	Latin Nation Championship|LATAM|1.2.1	
+21	Ray	Lolchinovg	Peach	AJHP (Lembruh/Alanweon)	2
+316	Ray	Lolchinovg	Bowser	AJHP (Lembruh/Alanweon)	2
+474	Ichigo	Haze01	Goku	River2-2	2
+632	Ichigo	Haze01	Goku	River2-2	1
+797	Link	DjVz	Link	Diaquz	2
+1045	Cf	DjVz	Gnw	Diaquz	2
+1280	Lloyd	Zxcas	Pika	KenyiK	1
+1513	Lloyd	Zxcas	Pika	KenyiK	1
+
+c7p9Ur1NHHQ	2025-07-13	N	Flash Royale|LATAM|1.4	
+4	ddd	Flamire	Isaac	Stiffler_r	2
+353	ddd	Flamire	Isaac	Stiffler_r	1
+678	ddd	Flamire	Isaac	Stiffler_r	2
+1055	ddd	Flamire	Isaac	Stiffler_r	1
+1320	ddd	Flamire	Isaac	Stiffler_r	1
+
+_i2094ZrUzI	2025-07-13	N	Flash Royale|LATAM|1.4	
+6	Zelda	EdgarBlink	Samus	LuisPPM	1
+266	Zelda	EdgarBlink	Samus	LuisPPM	1
+557	Zelda	EdgarBlink	Samus	LuisPPM	1
+
+U4B3hXYVHno	2025-07-13	N	Flash Royale|LATAM|1.4	
+4	Naruto	MT402	Gnw	Barrilito	1
+391	Wario	MT402	Gnw	Barrilito	1
+677	Wario	MT402	Gnw	Barrilito	1
+
+RlL7iY6SYPA	2025-07-13	N	Flash Royale|LATAM|1.4	
+8	ddd	Barrilito	Zelda	EdgarBlink	2
+296	ddd	Barrilito	Zelda	EdgarBlink	1
+617	ddd	Barrilito	Zelda	EdgarBlink	2
+1041	ddd	Barrilito	Zelda	EdgarBlink	2
+
+IhX2fp3OOk0	2025-07-13	N	Flash Royale|LATAM|1.4	
+2	Dk	ghubchuk(AlePe)	Wario	MT402	2
+228	Dk	ghubchuk(AlePe)	Wario	MT402	2
+374	Dk	ghubchuk(AlePe)	Wario	MT402	2
+
+5tfgcDYzPeI	2020-04-18	N	Latin Nation Championship|LATAM|1.2.1	
+14	Goku	River2-2	Yoshi	AJHP (Lembruh/Alanweon)	2
+179	Goku	River2-2	Wario	AJHP (Lembruh/Alanweon)	2
+338	Goku	River2-2	Waluigi	AJHP (Lembruh/Alanweon)	2
+560	Lloyd	Zxcas	Luffy	Diaquz	2
+726	Lloyd	Zxcas	Dk	Diaquz	2
+920	Lloyd	Zxcas	Puff	Diaquz	1
+
+2GjiOB63z2Q	2025-07-13	N	Flash Royale|LATAM|1.4	
+7	Link	SrB	Dk	ghubchuk(AlePe)	2
+255	Link	SrB	Dk	ghubchuk(AlePe)	1
+441	Link	SrB	Dk	ghubchuk(AlePe)	1
+677	Link	SrB	Dk	ghubchuk(AlePe)	2
+833	Link	SrB	Dk	ghubchuk(AlePe)	2
+
+GLKbRyPS2LQ	2020-04-18	N	Latin Nation Championship|LATAM|1.2.1	
+13	Bag	Diaquz	Dk	AJHP (Lembruh/Alanweon)	2
+192	Luffy	Diaquz	Link	AJHP (Lembruh/Alanweon)	2
+445	Ichigo	Diaquz	Zelda	AJHP (Lembruh/Alanweon)	1
+607	Bowser	Diaquz	Sheik	AJHP (Lembruh/Alanweon)	2
+
+Pg6RPniWebU	2020-04-18	N	Latin Nation Championship|LATAM|1.2.1	
+14	Cf	DjVz	Cf	AJHP (Lembruh/Alanweon)	2
+305	Link	DjVz	Zss	AJHP (Lembruh/Alanweon)	1
+532	Link	DjVz	Samus	AJHP (Lembruh/Alanweon)	1
+736	Cf	DjVz	Cf	AJHP (Lembruh/Alanweon)	2
+942	Link	DjVz	Dk	AJHP (Lembruh/Alanweon)	2
+
+oQCSAkK3KMg	2025-04-21	N	Flash Harder|LATAM|1.3	
+0	Ganon	Decroz (Hermes)	Zelda	EdgarBlink	2
+174	Ganon	Decroz (Hermes)	Zelda	EdgarBlink	2
+463	Ganon	Decroz (Hermes)	Zelda	EdgarBlink	1
+697	Ganon	Decroz (Hermes)	Zelda	EdgarBlink	1
+897	Ganon	Decroz (Hermes)	Zelda	EdgarBlink	2
+
+-mYgJnyVo9s	2025-04-21	N	Flash Harder|LATAM|1.3	
+0	Sonic	AJHP (Lembruh/Alanweon)	Samus	LuisPPM	2
+277	Sonic	AJHP (Lembruh/Alanweon)	Samus	LuisPPM	2
+615	Link	AJHP (Lembruh/Alanweon)	Samus	LuisPPM	2
+
+wCqrACQwxiI	2025-04-21	N	Flash Harder|LATAM|1.3	
+0	Link	SrB	Gnw	Barrilito	2
+411	Link	SrB	Gnw	Barrilito	1
+738	Link	SrB	Gnw	Barrilito	2
+1154	Link	SrB	Gnw	Barrilito	2
+
+zULqxe1qAcQ	2025-04-21	N	Flash Harder|LATAM|1.3	
+0	Ichigo	KiuroZ	Sora	Diaquz	1
+268	Ichigo	KiuroZ	Sora	Diaquz	2
+430	Ichigo	KiuroZ	Sora	Diaquz	1
+634	Ichigo	KiuroZ	Wario	Diaquz	2
+895	Ichigo	KiuroZ	Wario	Diaquz	2
+
+cZ8TIMC_yKE	2025-01-12	N	Final Down|WW|1.3.2	
+5	Krystal	S3mdd	Sora	VaporeyeZ	2
+177	Krystal	S3mdd	Sora	VaporeyeZ	2
+441	Simon	S3mdd	Tails	VaporeyeZ	1
+652	Simon	S3mdd	Sora	VaporeyeZ	2
+
+P8ZTOTBtXNc	2025-01-12	N	Final Down|WW|1.3.2	
+7	Ichigo	KiuroZ	Link	SrB	2
+192	Ichigo	KiuroZ	Link	SrB	2
+424	Ichigo	KiuroZ	Link	SrB	1
+
+52ntit1JKl0	2025-01-12	N	Final Down|WW|1.3.2	
+8	Falco	Tillur	Sora	VaporeyeZ	1
+259	Falco	Tillur	Sora	VaporeyeZ	2
+421	Falco	Tillur	Sora	VaporeyeZ	2
+685	Falco	Tillur	Sora	VaporeyeZ	1
+1038	Falco	Tillur	Sora	VaporeyeZ	1
+
+0QrwSzxSkkU	2025-01-12	N	Final Down|WW|1.3.2	
+6	Sora	VaporeyeZ	Gnw	Barrilito	2
+316	Sora	VaporeyeZ	Gnw	Barrilito	1
+742	Sora	VaporeyeZ	Gnw	Barrilito	1
+1041	Sora	VaporeyeZ	Gnw	Barrilito	2
+1457	Sora	VaporeyeZ	Gnw	Barrilito	2
+
+3oUiZqSllm8	2025-01-12	N	Final Down|WW|1.3.2	
+3	Falco	Tillur	Isaac	KenyiK	1
+273	Falco	Tillur	Sora	KenyiK	2
+592	Falco	Tillur	Sora	KenyiK	2
+758	Falco	Tillur	Sora	KenyiK	2
+
+MrzH_UPDUmc	2025-01-12	N	Final Down|WW|1.3.2	
+4	Zss	Extrov3rt	Gnw	Barrilito	1
+224	Zss	Extrov3rt	Gnw	Barrilito	2
+546	Zss	Extrov3rt	Gnw	Barrilito	2
+986	Gnw	Extrov3rt	Gnw	Barrilito	1
+1250	Gnw	Extrov3rt	Lloyd	Barrilito	1
+
+5HWRqs98EAU	2025-01-12	N	Final Down|WW|1.3.2	
+11	Isaac	KenyiK	Wario	Diaquz	1
+255	Sora	KenyiK	Sora	Diaquz	2
+430	Gnw	KenyiK	Sora	Diaquz	2
+592	Gnw	KenyiK	Puff	Diaquz	1
+753	Sora	KenyiK	Sora	Diaquz	2
+
+rQPrTd8ePkk	2025-01-12	N	Final Down|WW|1.3.2	
+1	Zss	Extrov3rt	Link	SrB	2
+236	Zss	Extrov3rt	Link	SrB	1
+460	Zss	Extrov3rt	Link	SrB	1
+636	Zss	Extrov3rt	Link	SrB	1
+
+CJq5honA8VI	2025-01-12	N	Final Down|WW|1.3.2	
+2	Zss	Extrov3rt	Isaac	KenyiK	2
+333	Zss	Extrov3rt	Isaac	KenyiK	1
+642	Zss	Extrov3rt	Gnw	KenyiK	2
+934	Gnw	Extrov3rt	Gnw	KenyiK	1
+1143	Zss	Extrov3rt	Gnw	KenyiK	1
+
+ZKyHiLID6V0	2025-01-12	N	Final Down|WW|1.3.2	
+10	Zss	Extrov3rt	Wario	Diaquz	1
+305	Zss	Extrov3rt	Bag	Diaquz	1
+488	Zss	Extrov3rt	Bbm	Diaquz	2
+657	Zss	Extrov3rt	Bbm	Diaquz	1
+920	Zss	Extrov3rt	Gnw	Diaquz	2
+1172	Zss	Extrov3rt	Gnw	Diaquz	1
+1361	Zss	Extrov3rt	Sora	Diaquz	1
+1640	Zss	Extrov3rt	Gnw	Diaquz	2
+1910	Zss	Extrov3rt	Gnw	Diaquz	2
+
+L-SomJJ3_XE	2025-01-12	N	Final Down|WW|1.3.2	
+3	Gnw	Barrilito	Sora	Mourad	1
+385	Gnw	Barrilito	Sora	Mourad	1
+703	Gnw	Barrilito	Sora	Mourad	1
+
+J3RHI23UVSQ	2025-01-12	N	Final Down|WW|1.3.2	
+3	Samus	Quackus	Gnw	Barrilito	2
+327	Samus	Quackus	Gnw	Barrilito	2
+
+9hHmBpg8PWA	2025-01-12	N	Final Down|WW|1.3.2	
+4	Lloyd	Sushi	Tails	Diaquz	2
+319	Zss	Sushi	Tails	Diaquz	2
+
+IcEypxDwFGs	2025-01-12	N	Final Down|WW|1.3.2	
+3	Zss	Extrov3rt	Samus	Quackus	1
+257	Zss	Extrov3rt	Samus	Quackus	1
+
+WbBLhxz40_I	2025-01-12	N	Final Down|WW|1.3.2	
+9	Isaac	KenyiK	Bowser	JMi	1
+208	Isaac	KenyiK	Bowser	JMi	1
+
+bKcPnjSuTZU	2025-01-12	N	Final Down|WW|1.3.2	
+4	Ichigo	KiuroZ	Sora	Diaquz	2
+140	Ichigo	KiuroZ	Sora	Diaquz	2
+305	Luigi	KiuroZ	Bag	Diaquz	2
+
+AmmxlcRloYw	2025-01-12	N	Final Down|WW|1.3.2	
+4	Ichigo	KiuroZ	Zelda	EdgarBlink	1
+251	Naruto	KiuroZ	Zelda	EdgarBlink	2
+397	Ichigo	KiuroZ	Zelda	EdgarBlink	1
+882	Ichigo	KiuroZ	Zelda	EdgarBlink	1
+
+Jq32ouuQ0YI	2025-01-12	N	Final Down|WW|1.3.2	
+4	Sora	Mourad	Luffy	KenyiK	2
+272	Sora	Mourad	Luffy	KenyiK	1
+603	Sora	Mourad	Gnw	KenyiK	2
+861	Sora	Mourad	Ichigo	KenyiK	2
+
+gxwzirwGN3Y	2025-01-12	N	Final Down|WW|1.3.2	
+3	Sora	Mourad	Zss	MT402	1
+243	Sora	Mourad	Zss	MT402	1
+
+r9eBeuU9Gwc	2025-01-12	N	Final Down|WW|1.3.2	
+6	Wario	MT402	Bowser	JMi	2
+168	Zss	MT402	Bowser	JMi	1
+368	Zss	MT402	Bowser	JMi	1
+
+OKnxNtOES-U	2025-01-12	N	Final Down|WW|1.3.2	
+8	Krystal	S3mdd	Ichigo	KiuroZ	2
+289	Krystal	S3mdd	Ichigo	KiuroZ	1
+530	Krystal	S3mdd	Ichigo	KiuroZ	2
+
+lLRLs6tVdFM	2025-01-12	N	Final Down|WW|1.3.2	
+3	Krystal	S3mdd	Isaac	Stiffler_r	1
+292	Krystal	S3mdd	Isaac	Stiffler_r	1
+
+6PsBXroek6M	2025-01-12	N	Final Down|WW|1.3.2	
+3	Gnw	Barrilito	Link	SrB	2
+402	Gnw	Barrilito	Link	SrB	1
+690	Gnw	Barrilito	Link	SrB	2
+
+7xS13Xo5Ei4	2025-01-12	N	Final Down|WW|1.3.2	
+5	Link	SrB	Zss	Extrov3rt	2
+256	Link	SrB	Zss	Extrov3rt	2
+467	Link	SrB	Zss	Extrov3rt	2
+
+yotqPOohpKA	2025-01-12	N	Final Down|WW|1.3.2	
+4	Link	SrB	Samus	MT402	1
+262	Link	SrB	Zss	MT402	2
+556	Link	SrB	Zss	MT402	1
+866	Link	SrB	Zss	MT402	2
+1148	Link	SrB	Zss	MT402	1
+
+7UmSMHLWbik	2025-01-12	N	Final Down|WW|1.3.2	
+3	Falco	Tillur	Simon	Drarky	1
+185	Falco	Tillur	Pichu	Drarky	2
+469	Falco	Tillur	Pichu	Drarky	1
+
+CHRidf4K9D4	2025-01-12	N	Final Down|WW|1.3.2	
+3	Zss	EdgarBlink	Sora	VaporeyeZ	2
+256	Zss	EdgarBlink	Sora	VaporeyeZ	2
+
+yL_7C-mwStk	2021-07-16	N	South America After Dark|LATAM|1.3	
+0	Bag	Diaquz	Lloyd	Mariofeeh	1
+252	Wario	Diaquz	Lloyd	Mariofeeh	2
+522	Dk	Diaquz	Lloyd	Mariofeeh	1
+762	Luffy	Diaquz	Lloyd	Mariofeeh	1
+1033	Bowser	Diaquz	Lloyd	Mariofeeh	2
+1272	Luffy	Diaquz	Lloyd	Mariofeeh	2
+1551	Dk	Diaquz	Lloyd	Mariofeeh	1
+1662	Dk	Diaquz	Lloyd	Mariofeeh	1
+1894	Luffy	Diaquz	Lloyd	Mariofeeh	1
+
+6-QLNBis4JY	2021-07-16	N	South America After Dark|LATAM|1.3	
+0	Lloyd	Mariofeeh	Krystal	Diaquz	1
+185	Lloyd	Mariofeeh	Samus	Diaquz	1
+356	Lloyd	Mariofeeh	Lloyd	Diaquz	2
+640	Lloyd	Mariofeeh	Ichigo	Diaquz	1
+
+j9KoUwk7wxc	2021-07-16	N	South America After Dark|LATAM|1.3	
+1	Link	ZashyPuP (KlaYn)	Lloyd	Mariofeeh	2
+212	Krystal	ZashyPuP (KlaYn)	Lloyd	Mariofeeh	1
+426	Krystal	ZashyPuP (KlaYn)	Lloyd	Mariofeeh	2
+557	Krystal	ZashyPuP (KlaYn)	Lloyd	Mariofeeh	2
+
+3T7Q-NNI0ik	2021-07-16	N	South America After Dark|LATAM|1.3	
+0	Luffy	Diaquz	Luffy	KenyiK	1
+178	Luffy	Diaquz	Luffy	KenyiK	2
+417	Luffy	Diaquz	Luffy	KenyiK	1
+698	Luffy	Diaquz	Luffy	KenyiK	1
+
+R1lpxa_QWYs	2021-07-16	N	South America After Dark|LATAM|1.3	
+0	Samus	Lpoool	Sonic	Spiderboy	2
+336	Samus	Lpoool	Sonic	Spiderboy	2
+
+aPNiCHbyr0U	2021-07-16	N	South America After Dark|LATAM|1.3	
+0	Chibi	Powtter (Gonzero)	Dk	Briamty289	1
+242	Chibi	Powtter (Gonzero)	Link	Briamty289	2
+484	Chibi	Powtter (Gonzero)	Link	Briamty289	1
+
+nsbfrxkFY-I	2021-07-16	N	South America After Dark|LATAM|1.3	
+0	Tails	GKTails	Zss	MT402	1
+241	Tails	GKTails	Wario	MT402	1
+
+Clls9knBYQ4	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+8	Ichigo	KiuroZ	Lucario	LMGraffity	2
+283	Ichigo	KiuroZ	Lucario	LMGraffity	2
+614	Ichigo	KiuroZ	Lucario	LMGraffity	1
+912	Ichigo	KiuroZ	Lucario	LMGraffity	1
+1160	Ichigo	KiuroZ	Lucario	LMGraffity	2
+
+9Twd1CMVHb0	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+6	Link	SrB	Wario	Samisyeps	1
+251	Link	SrB	Wario	Samisyeps	2
+536	Link	SrB	Wario	Samisyeps	2
+773	Link	SrB	Wario	Samisyeps	1
+1004	Link	SrB	Wario	Samisyeps	1
+
+HkgxUszvStg	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+5	Zss	EdgarBlink	Lucario	Rs	2
+268	Zss	EdgarBlink	Lucario	Rs	2
+480	Zelda	EdgarBlink	Lucario	Rs	2
+
+M20_3eFXhOI	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+5	Lucario	Rs	Wario	MT402	1
+243	Lucario	Rs	Naruto	MT402	1
+480	Lucario	Rs	Naruto	MT402	1
+
+MYmwJtkziBE	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+5	Wario	Waldo	Lucario	Rs	2
+217	Wario	Waldo	Lucario	Rs	2
+388	Wario	Waldo	Lucario	Rs	2
+
+bbPFpC1YoKE	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+10	ddd	Flamire	Zelda	EdgarBlink	2
+282	ddd	Flamire	Zelda	EdgarBlink	2
+515	ddd	Flamire	Zelda	EdgarBlink	1
+776	ddd	Flamire	Zelda	EdgarBlink	2
+
+Dzi6mvRjSqA	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+6	Ray	TheUnfunnyNoodles	Wario	MT402	2
+255	Ray	TheUnfunnyNoodles	Wario	MT402	2
+553	Ray	TheUnfunnyNoodles	Wario	MT402	1
+801	Ray	TheUnfunnyNoodles	Wario	MT402	1
+1105	Ray	TheUnfunnyNoodles	Wario	MT402	2
+
+AOiB3AAsuCY	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+18	Lucario	LMGraffity	Isaac	Rs	2
+247	Lucario	LMGraffity	Isaac	Rs	1
+575	Lucario	LMGraffity	Isaac	Rs	2
+814	Lucario	LMGraffity	Bag	Rs	2
+
+fKMms5s2U-k	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+4	Lucario	LMGraffity	Zelda	EdgarBlink	1
+331	Lucario	LMGraffity	Zelda	EdgarBlink	1
+586	Lucario	LMGraffity	Zss	EdgarBlink	2
+895	Lucario	LMGraffity	Zss	EdgarBlink	1
+
+Swh7rXdnS24	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+2	Lucario	LMGraffity	Ryu	GabrielKof	2
+288	Lucario	LMGraffity	Ryu	GabrielKof	1
+601	Lucario	LMGraffity	Ryu	GabrielKof	2
+949	Lucario	LMGraffity	Ryu	GabrielKof	2
+
+xgI3xXv1OZA	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+4	ddd	Flamire	Wario	MT402	2
+232	ddd	Flamire	Wario	MT402	1
+496	ddd	Flamire	Wario	MT402	2
+704	ddd	Flamire	Wario	MT402	1
+975	ddd	Flamire	Wario	MT402	2
+
+o5KQFWxbLW4	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+7	Gnw	Barrilito	Ryu	GabrielKof	1
+348	Gnw	Barrilito	Goku	GabrielKof	2
+684	Gnw	Barrilito	Goku	GabrielKof	2
+1073	Gnw	Barrilito	Goku	GabrielKof	2
+
+lt8ckCZ_uX0	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+8	Ichigo	KiuroZ	Ray	TheUnfunnyNoodles	1
+213	Ichigo	KiuroZ	Ray	TheUnfunnyNoodles	2
+431	Ichigo	KiuroZ	Ray	TheUnfunnyNoodles	2
+718	Ichigo	KiuroZ	Ray	TheUnfunnyNoodles	1
+996	Ichigo	KiuroZ	Ray	TheUnfunnyNoodles	2
+
+rqK6WhXqlEA	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+9	Wario	Samisyeps	Goku	GabrielKof	2
+246	Wario	Samisyeps	Goku	GabrielKof	2
+497	Wario	Samisyeps	Goku	GabrielKof	2
+
+UOCsDzOewIg	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+1	Wario	Waldo	ddd	Barrilito	2
+232	Wario	Waldo	ddd	Barrilito	2
+492	Wario	Waldo	ddd	Barrilito	2
+
+tzvMVh16_s0	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+5	Gnw	Barrilito	Zss	MT402	2
+334	ddd	Barrilito	Zss	MT402	1
+612	ddd	Barrilito	Zss	MT402	2
+933	Gnw	Barrilito	Wario	MT402	2
+
+d59JBjYnbNo	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+7	Lucario	Rs	Ryu	GabrielKof	2
+253	Lucario	Rs	Ryu	GabrielKof	1
+467	Lucario	Rs	Ryu	GabrielKof	1
+716	Lucario	Rs	Ryu	GabrielKof	1
+1013	Lucario	Rs	Ryu	GabrielKof	1
+1266	Lucario	Rs	Goku	GabrielKof	1
+1547	Lucario	Rs	Ryu	GabrielKof	2
+1814	Bag	Rs	Ryu	GabrielKof	1
+
+yrxAS10qe8w	2021-11-13	N	SSF2 Warriors|LATAM|1.3.1	
+0	Lloyd	Diaquz	Bbm	Powtter (Gonzero)	1
+172	Bbm	Diaquz	Ryu	Powtter (Gonzero)	1
+404	Luffy	Diaquz	Lucario	Powtter (Gonzero)	2
+599	Luffy	Diaquz	Naruto	Powtter (Gonzero)	2
+752	Isaac	Diaquz	Sora	Powtter (Gonzero)	1
+964	Bm	Diaquz	Ray	Powtter (Gonzero)	1
+1093	Bag	Diaquz	Ichigo	Powtter (Gonzero)	2
+1301	Dk	Diaquz	Ichigo	Powtter (Gonzero)	1
+
+gebth4UwAL0	2025-10-19	N	Frozen Peak II|LATAM|1.4	
+5	Link	SrB	Sora	Rs	2
+202	Link	SrB	Sora	Rs	1
+622	Link	SrB	Sora	Rs	2
+922	Link	SrB	Sora	Rs	2
+
+Ktqp6RxSkIo	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Sonic	KenyiK	Gnw	Barrilito	1
+180	Sonic	KenyiK	Gnw	Barrilito	1
+390	Sonic	KenyiK	Gnw	Barrilito	1
+
+9Vy2ufdwISA	2025-02-16	N	Demon Days|LATAM|1.3.2	
+4	Ganon	Diaquz	Gnw	Barrilito	2
+109	Marth	Diaquz	Gnw	Barrilito	1
+303	Yoshi	Diaquz	Gnw	Barrilito	2
+481	Gnw	Diaquz	Gnw	Barrilito	2
+
+cweuwCIfqrk	2025-02-16	N	Demon Days|LATAM|1.3.2	
+2	Gnw	Barrilito	Zss	EdgarBlink	1
+331	Gnw	Barrilito	Zss	EdgarBlink	2
+668	Gnw	Barrilito	Zss	EdgarBlink	1
+1040	Gnw	Barrilito	Zss	EdgarBlink	1
+
+L44-Ko0PaVg	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Sora	Diaquz	Sora	KenyiK	2
+126	Puff	Diaquz	Sora	KenyiK	2
+313	Luigi	Diaquz	Sora	KenyiK	2
+
+nVGLl6U4vqE	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Link	SrB	Zelda	EdgarBlink	1
+200	Link	SrB	Zelda	EdgarBlink	2
+457	Link	SrB	Zelda	EdgarBlink	2
+722	Link	SrB	Zelda	EdgarBlink	1
+983	Link	SrB	Zelda	EdgarBlink	2
+
+fbpuqyQfvrY	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Lloyd	Mariofeeh	Gnw	Barrilito	1
+265	Lloyd	Mariofeeh	Gnw	Barrilito	2
+535	Marth	Mariofeeh	Gnw	Barrilito	2
+759	Marth	Mariofeeh	Gnw	Barrilito	2
+
+r-euozsviFw	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Krystal	S3mdd	Lloyd	Mariofeeh	2
+158	Bowser	S3mdd	Lloyd	Mariofeeh	2
+389	Bowser	S3mdd	Lloyd	Mariofeeh	2
+
+MRq03J0xXi0	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Ichigo	KiuroZ	Zelda	EdgarBlink	1
+335	Ichigo	KiuroZ	Zelda	EdgarBlink	2
+558	Ichigo	KiuroZ	Zelda	EdgarBlink	2
+783	Ichigo	KiuroZ	Zelda	EdgarBlink	2
+
+ege9HjKt3BA	2025-02-16	N	Demon Days|LATAM|1.3.2	
+2	Link	SrB	Isaac	KenyiK	2
+308	Link	SrB	Sonic	KenyiK	2
+539	Link	SrB	Sonic	KenyiK	2
+
+Li5UezAooRM	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Gnw	Barrilito	Marth	Diaquz	2
+281	Gnw	Barrilito	Marth	Diaquz	1
+589	Gnw	Barrilito	Ichigo	Diaquz	1
+961	Gnw	Barrilito	Bbm	Diaquz	2
+1251	Gnw	Barrilito	Marth	Diaquz	2
+
+ZlF2qqDbKvI	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Krystal	S3mdd	Ray	TheUnfunnyNoodles	1
+199	Krystal	S3mdd	Ray	TheUnfunnyNoodles	2
+475	Krystal	S3mdd	Ray	TheUnfunnyNoodles	1
+746	Krystal	S3mdd	Ray	TheUnfunnyNoodles	2
+937	Krystal	S3mdd	Ray	TheUnfunnyNoodles	1
+
+JAJY7k6RzcA	2025-02-16	N	Demon Days|LATAM|1.3.2	
+2	Marth	Mariofeeh	Zss	MT402	1
+219	Marth	Mariofeeh	Zss	MT402	1
+521	Marth	Mariofeeh	Zss	MT402	1
+
+AGQlscRTLDQ	2025-02-16	N	Demon Days|LATAM|1.3.2	
+4	Zelda	EdgarBlink	Ryu	GabrielKof	1
+303	Zelda	EdgarBlink	Ichigo	GabrielKof	1
+475	Zelda	EdgarBlink	Ryu	GabrielKof	1
+
+4kXynnUQ9Ss	2025-02-16	N	Demon Days|LATAM|1.3.2	
+2	Samus	MT402	Link	SrB	2
+275	Samus	MT402	Link	SrB	2
+586	Zss	MT402	Link	SrB	1
+807	Zss	MT402	Link	SrB	2
+
+D3pMDmINyfI	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Isaac	KenyiK	Krystal	S3mdd	1
+238	Sora	KenyiK	Krystal	S3mdd	1
+469	Ichigo	KenyiK	Krystal	S3mdd	2
+754	Sora	KenyiK	Krystal	S3mdd	1
+
+cdVFTzjxsoA	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Gnw	Barrilito	Kirby	Lag-Man	1
+270	Gnw	Barrilito	Kirby	Lag-Man	1
+459	Gnw	Barrilito	Kirby	Lag-Man	1
+
+ksjaUlsxLr0	2025-02-16	N	Demon Days|LATAM|1.3.2	
+3	Ray	TheKrokos	Cf	OrbStealer	1
+192	Bm	TheKrokos	Cf	OrbStealer	1
+
+tEzwxCV7kas	2025-02-16	N	Demon Days|LATAM|1.3.2	
+2	Marth	JugueraXD	Pichu	Xebaweba	1
+216	Marth	JugueraXD	Zss	Xebaweba	1
+
+DG4-A7Cb40U	2025-04-21	N	Flash Harder|LATAM|1.3	
+0	Wario	Samisyeps	Bag	AJHP (Lembruh/Alanweon)	1
+171	Wario	Samisyeps	Yoshi	AJHP (Lembruh/Alanweon)	2
+418	Wario	Samisyeps	Link	AJHP (Lembruh/Alanweon)	2
+661	Wario	Samisyeps	Cf	AJHP (Lembruh/Alanweon)	2
+
+JR69K7bJdHA	2026-01-11	N	WorldWide Fest|WW|1.4	
+32	Cf	Konfapooch (Astral/Eikeshuu)	Sonic	KenyiK	1
+
+RtnAoZH0r8s	2026-10-23	N	AFTER DARK: ROLLBACK SEASON START	::1
+0	Sonic	Toriko	ddd	Otzio	1

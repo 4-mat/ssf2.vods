@@ -25,7 +25,7 @@
 		var netcodeTag = match.videoData.netcode === "D" ? "Delay-Based" :
 		                 match.videoData.netcode === "R" ? "Rollback" : "";
 		if(netcodeTag) {
-			%><span class="tag <%=match.videoData.netcode === "D" ? "netcode-delay" : ""%>"><%=netcodeTag%></span><%
+			%><span class="tag <%=match.videoData.netcode === "D" ? "netcode-delay" : match.videoData.netcode === "R" ? "netcode-rollback" : ""%>"><%=netcodeTag%></span><%
 		}
 		for(let tag of tags) {
 			%>

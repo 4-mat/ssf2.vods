@@ -462,3 +462,7 @@ a {
 .tag.netcode-delay {
 	background-color: #f39c12;
 }
+
+.tag.netcode-rollback {
+    background-color: #8e44ad;
+}

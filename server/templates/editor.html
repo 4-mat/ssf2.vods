@@ -260,13 +260,18 @@
 						</span>
 					</div>
 					<div class="ms-form-group">
-						<button id="ActionButton" data-time="0s" class="ms-btn ms-info ms-fullwidth">Add</button>
+						<button id="ActionButton" data-time="0s"
+							class="ms-btn ms-info ms-fullwidth">Add</button>
 					</div>
 				</div>
 				<div class="col-sm">
 					<div class="ms-form-group">
 						<label><b>&nbsp;</b></label>
 						<button id="TimeRefreshButton" class="ms-btn ms-info ms-fullwidth">Refresh time</button>
+					</div>
+					<div class="ms-form-group">
+						<input id="ManualTimeInput" type="text" inputmode="numeric"
+							placeholder="m:ss" aria-label="Manual video timestamp">
 					</div>
 					<div class="ms-form-group" id="CancelEditContainer" hidden>
 						<button id="CancelEditButton" hidden class="ms-btn ms-outline-danger ms-fullwidth">Cancel edit mode</button>

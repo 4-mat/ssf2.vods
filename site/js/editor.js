@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 	let url = new URLSearchParams(location.search);
 	let videoId = url.get("videoId")||null;
@@ -5,6 +6,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function Editor(videoId) {
+	const params = new URLSearchParams(location.search);
+	this.candidatePrefill = [
+		"candidateDate",
+		"candidateTags",
+		"candidateNetplay",
+		"candidateNetcode",
+		"candidateDateChanged",
+		"candidateTagsChanged",
+		"candidateNetplayChanged",
+		"candidateNetcodeChanged",
+		"candidateTitle"
+	].some(key => params.has(key)) ? {
+		date: params.has("candidateDate") ? params.get("candidateDate") : null,
+		tags: params.has("candidateTags") ? params.get("candidateTags") : null,
+		netplay: params.has("candidateNetplay") ? params.get("candidateNetplay") : null,
+		netcode: params.has("candidateNetcode") ? params.get("candidateNetcode") : null,
+		dateChanged: params.get("candidateDateChanged") === "1",
+		tagsChanged: params.get("candidateTagsChanged") === "1",
+		netplayChanged: params.get("candidateNetplayChanged") === "1",
+		netcodeChanged: params.get("candidateNetcodeChanged") === "1",
+		title: params.has("candidateTitle") ? params.get("candidateTitle") : null
+	} : null;
 	this.PlayerLoaderForm = document.getElementById("PlayerLoaderForm");
 	this.VideoURLInput = document.getElementById("VideoURLInput");
 	this.PlayerLoadButton = document.getElementById("PlayerLoadButton");
@@ -20,6 +43,11 @@ function Editor(videoId) {
 	this.P2Char = document.getElementById("P2Char");
 	this.P2Name = document.getElementById("P2Name");
 	this.P2NameList = document.getElementById("p2name-list");
+
+	this.candidateMatchIndex = 0;
+	this.candidateMatchup = this.candidatePrefill && this.candidatePrefill.title
+		? this.parseCandidateMatchup(this.candidatePrefill.title)
+		: null;
 	this.VideoDate = document.getElementById("VideoDate");
 	this.WinnerSelect = document.getElementById("WinnerSelect");
 	this.VideoTags = document.getElementById("VideoTags");
@@ -28,6 +56,7 @@ function Editor(videoId) {
 	this.UpdateVideoDataButton = document.getElementById("UpdateVideoDataButton");
 	this.ActionButton = document.getElementById("ActionButton");
 	this.TimeRefreshButton = document.getElementById("TimeRefreshButton");
+	this.ManualTimeInput = document.getElementById("ManualTimeInput");
 	this.CancelEditButton = document.getElementById("CancelEditButton");
 	this.CancelEditContainer = document.getElementById("CancelEditContainer");
 	this.EditorGuide = document.getElementById("EditorGuide");
@@ -60,6 +89,40 @@ Editor.prototype.setupEvents = function() {
 	}
 
 	this.TimeRefreshButton.addEventListener("click", () => {
+		const manualTime = this.ManualTimeInput.value.trim();
+
+		if(manualTime) {
+			let seconds;
+
+			if(/^\d+$/.test(manualTime)) {
+				seconds = Number(manualTime);
+			} else {
+				const parts = manualTime.split(":");
+
+				if(parts.length === 2 &&
+					/^\d+$/.test(parts[0]) &&
+					/^\d{1,2}$/.test(parts[1]) &&
+					Number(parts[1]) < 60) {
+					seconds = Number(parts[0]) * 60 + Number(parts[1]);
+				} else if(parts.length === 3 &&
+					parts.every(part => /^\d+$/.test(part)) &&
+					Number(parts[1]) < 60 &&
+					Number(parts[2]) < 60) {
+					seconds = Number(parts[0]) * 3600 +
+						Number(parts[1]) * 60 +
+						Number(parts[2]);
+				}
+			}
+
+			if(!Number.isSafeInteger(seconds) || seconds < 0) {
+				alert("Enter a valid timestamp: seconds, m:ss, or h:mm:ss.");
+				return;
+			}
+
+			this.onTimeChange(seconds);
+			return;
+		}
+
 		if(this.YoutubePlayer && this.YoutubePlayer.getCurrentTime) {
 			this.onTimeChange(Math.floor(this.YoutubePlayer.getCurrentTime()));
 		} else {
@@ -198,7 +261,176 @@ Editor.prototype.buildTipEntry = function(char, name) {
 	return container;
 };
 
-Editor.prototype.updateMatchList = function(vid) {
+
+Editor.prototype.parseCandidateMatchup = function(title) {
+	const normalize = value => String(value || "")
+		.replace(/&amp;/gi, "&")
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "");
+
+	const buildCharacterLookup = select => {
+		const lookup = new Map();
+
+		for(const option of select.options) {
+			if(!option.value) continue;
+			lookup.set(normalize(option.value), option.value);
+			lookup.set(normalize(option.textContent), option.value);
+		}
+
+		const aliases = {
+			"c falcon": "Falcon",
+			"captain falcon": "Falcon",
+			"puff": "Jigglypuff",
+			"pikachu": "Pikachu",
+			"donkey kong": "Donkey Kong",
+			"gnw": "Mr. Game & Watch",
+			"game and watch": "Mr. Game & Watch",
+			"king dedede": "King Dedede",
+			"megaman": "Mega Man",
+			"meta knight": "Meta Knight",
+			"pacman": "Pac-Man",
+			"rayman": "Rayman",
+			"chibi robo": "Chibi-Robo",
+			"ganondorf": "Ganondorf",
+			"jigglypuff": "Jigglypuff",
+			"zero suit samus": "Zero Suit Samus",
+			"bandana dee": "Bandana Dee",
+			"bdee": "Bandana Dee",
+			"bomberman": "Bomberman",
+			"black mage": "Black Mage",
+			"sandbag": "Sandbag",
+			"multiple": "",
+			"rock": ""
+		};
+
+		for(const [alias, displayName] of Object.entries(aliases)) {
+			if(!displayName) continue;
+			const value = lookup.get(normalize(displayName));
+			if(value) lookup.set(normalize(alias), value);
+		}
+
+		return lookup;
+	};
+
+	const p1Lookup = buildCharacterLookup(this.P1Char);
+	const p2Lookup = buildCharacterLookup(this.P2Char);
+
+	const resolveCharacter = (name, lookup) => {
+		return lookup.get(normalize(name)) || "";
+	};
+
+	const cleanSide = (side, lookup, isLeft) => {
+		side = String(side || "").trim();
+
+		// Player 1 may have tournament/round text before the matchup.
+		if(isLeft) {
+			const lastSeparator = side.lastIndexOf(" - ");
+			if(lastSeparator !== -1) {
+				side = side.slice(lastSeparator + 3).trim();
+			}
+		} else {
+			// Player 2 may have tournament/round text after the matchup.
+			const suffix = side.indexOf(" - ");
+			if(suffix !== -1) {
+				side = side.slice(0, suffix).trim();
+			}
+		}
+
+		side = side
+			.replace(/^SSF2\s+Replay\s*:\s*/i, "")
+			.replace(/^\[[^\]]+\]\s*\d*\s*-\s*/i, "")
+			.replace(/^#\s*/, "")
+			.trim();
+
+		const match = side.match(/^(.*?)\s*\(([^()]*)\)\s*$/);
+
+		if(match) {
+			const outside = match[1].trim();
+			const inside = match[2].trim();
+
+			const characters = inside.split(",")
+				.map(item => resolveCharacter(item.trim(), lookup))
+				.filter(Boolean);
+
+			if(characters.length) {
+				return {
+					name: outside,
+					characters
+				};
+			}
+
+			// Also accept reversed titles such as "Sheik (Pho)".
+			const leadingCharacter = resolveCharacter(outside, lookup);
+			if(leadingCharacter && inside) {
+				return {
+					name: inside,
+					characters: [leadingCharacter]
+				};
+			}
+
+			// Parentheses containing only a player name are not a character.
+			return {
+				name: outside || inside,
+				characters: []
+			};
+		}
+
+		return {
+			name: side,
+			characters: []
+		};
+	};
+
+	const cleanedTitle = String(title || "")
+		.replace(/&amp;/gi, "&")
+		.replace(/\s+/g, " ")
+		.trim();
+
+	const separator = cleanedTitle.match(/\s+(?:vs\.?|versus)\s+/i);
+	if(!separator) return null;
+
+	const index = cleanedTitle.search(/\s+(?:vs\.?|versus)\s+/i);
+	const left = cleanedTitle.slice(0, index);
+	const right = cleanedTitle.slice(index + separator[0].length);
+
+	const p1 = cleanSide(left, p1Lookup, true);
+	const p2 = cleanSide(right, p2Lookup, false);
+
+	if(!p1.name && !p2.name) return null;
+
+	return {
+		p1,
+		p2
+	};
+};
+
+Editor.prototype.applyCandidateMatch = function() {
+	if(!this.candidateMatchup) return;
+
+	const index = this.candidateMatchIndex;
+	const characterAt = (characters, position) => {
+		if(!characters.length) return "";
+		if(characters.length === 1) return characters[0];
+		return characters[position] || "";
+	};
+
+	this.P1Name.value = this.candidateMatchup.p1.name;
+	this.P2Name.value = this.candidateMatchup.p2.name;
+	this.P1Char.value = characterAt(
+		this.candidateMatchup.p1.characters, index
+	);
+	this.P2Char.value = characterAt(
+		this.candidateMatchup.p2.characters, index
+	);
+};
+
+Editor.prototype.advanceCandidateMatch = function() {
+	if(!this.candidateMatchup) return;
+	this.candidateMatchIndex++;
+	this.applyCandidateMatch();
+};
+
+Editor.prototype.updateMatchList = function(vid, prefill) {
 	if(!vid) {
 		vid = this.YoutubePlayer.getVideoData().video_id;
 	}
@@ -211,6 +443,36 @@ Editor.prototype.updateMatchList = function(vid) {
 			this.NetplaySelect.value = json.netplay || "";
 			this.NetcodeSelect.value = json.netcode || "";
 			this.VideoTags.value = json.tags ? json.tags.join("|") : "";
+
+			// Candidate values fill missing saved data unless explicitly edited.
+			if(prefill) {
+				if(prefill.date !== null &&
+					(prefill.dateChanged || !this.VideoDate.value)) {
+					this.VideoDate.value = prefill.date;
+				}
+				if(prefill.tags !== null &&
+					(prefill.tagsChanged || !this.VideoTags.value)) {
+					this.VideoTags.value = prefill.tags;
+				}
+				if(prefill.netplay !== null &&
+					(prefill.netplayChanged || !this.NetplaySelect.value)) {
+					this.NetplaySelect.value = prefill.netplay;
+				}
+				if(prefill.netcode !== null &&
+					(prefill.netcodeChanged || !this.NetcodeSelect.value)) {
+					this.NetcodeSelect.value = prefill.netcode;
+				}
+
+				if(this.candidateMatchup &&
+					!this.ResultsList.querySelector(".edit-button")) {
+					this.applyCandidateMatch();
+				}
+			}
+
+			// Delay-based is the default only when no saved or supplied netcode exists.
+			if(!this.NetcodeSelect.value) {
+				this.NetcodeSelect.value = "D";
+			}
 
 			//Go To buttons events
 			let gotoButtons = document.getElementsByClassName("goto-button");
@@ -376,12 +638,14 @@ Editor.prototype.addMatch = function() {
 				if(retry.status !== 200) {
 					alert(await retry.text());
 				} else {
+					this.advanceCandidateMatch();
 					this.updateMatchList();
 				}
 			}
 		} else if(r.status !== 200) {
 			alert(await r.text());
 		} else {
+			this.advanceCandidateMatch();
 			this.updateMatchList();
 		}
 	}).catch(error => alert(error.message));
@@ -430,7 +694,9 @@ Editor.prototype.loadYoutubePlayer = function() {
 		}
 	});
 
-	this.updateMatchList(id);
+	const candidatePrefill = this.candidatePrefill;
+	this.candidatePrefill = null;
+	this.updateMatchList(id, candidatePrefill);
 	window.history.pushState("","","?videoId=" + id);
 };
 

@@ -12,7 +12,27 @@
 			<br>
 			Instead of adding something, it will be faster to approve/adjust an existing video.
 			<br>
-			If you spot same IP address consistently adding matches and with good quality, maybe they should get a token? Let Eika know.
+			If you spot same IP address consistently adding matches and with good quality, maybe they should get a token? Let LHG know.
+		</div>
+
+		<div class="container">
+			<button type="button" id="automatic-show-hidden" disabled>Show hidden (0)</button>
+			<button type="button" id="youtube-hide-all" disabled>Hide all current candidates</button>
+			<div id="automatic-provisional-content">
+				<h2>Automatic Provisional</h2>
+				<p>Likely SSF2 replay candidates found automatically.</p>
+				<div id="youtube-automatic">Loading candidates...</div>
+			</div>
+		</div>
+		<div class="container">
+			<h2>Needs Review</h2>
+			<p>Possible matches that need a closer look.</p>
+			<div id="youtube-review">Loading candidates...</div>
+		</div>
+		<div class="container">
+			<button type="button" onclick="scanYouTubeCandidates()">Scan YouTube now</button>
+			<button type="button" id="youtube-discovery-reset" onclick="resetYouTubeDiscovery()">Reset discovery database</button>
+			<span id="youtube-discovery-status" role="status"></span>
 		</div>
 		<div class="container">
 			<%
@@ -101,5 +121,472 @@
 				});
 			}
 		}
+
+		async function youtubeRequest(url, options = {}) {
+			const response = await fetch(url, options);
+			if(!response.ok) {
+				throw new Error(await response.text() || "Request failed.");
+			}
+			if(response.status === 204) return null;
+			const type = response.headers.get("content-type") || "";
+			return type.includes("application/json") ? response.json() : null;
+		}
+
+		function youtubeElement(tag, text, className) {
+			const element = document.createElement(tag);
+			if(text !== undefined) element.textContent = text;
+			if(className) element.className = className;
+			return element;
+		}
+
+		function youtubeField(card, labelText, type, value, required = false) {
+			const label = youtubeElement("label", labelText);
+			label.style.display = "block";
+			label.style.margin = "8px 0";
+			const input = document.createElement(type === "select" ? "select" : "input");
+			if(type !== "select") input.type = type;
+			if(type === "select") {
+				for(const [optionValue, optionText] of value) {
+					const option = youtubeElement("option", optionText);
+					option.value = optionValue;
+					input.appendChild(option);
+				}
+			} else {
+				input.value = value || "";
+			}
+			input.required = required;
+			input.style.marginLeft = "8px";
+			label.appendChild(input);
+			card.appendChild(label);
+			return input;
+		}
+
+		let showAllAutomaticHidden = false;
+		let automaticHiddenCards = [];
+
+		function updateAutomaticHiddenButton() {
+			const button = document.getElementById("automatic-show-hidden");
+			const hideAllButton = document.getElementById("youtube-hide-all");
+			if(!button) return;
+
+			const count = automaticHiddenCards.filter(item => item.hidden).length;
+			button.textContent = (showAllAutomaticHidden ? "Hide hidden (" : "Show hidden (") + count + ")";
+			button.disabled = count === 0;
+			if(hideAllButton) {
+				hideAllButton.disabled = automaticHiddenCards.every(item => item.hidden);
+			}
+		}
+
+		document.getElementById("automatic-show-hidden").addEventListener("click", () => {
+			showAllAutomaticHidden = !showAllAutomaticHidden;
+
+			for(const item of automaticHiddenCards) {
+				item.content.hidden = item.hidden && !showAllAutomaticHidden;
+			}
+
+			updateAutomaticHiddenButton();
+		});
+
+		document.getElementById("youtube-hide-all").addEventListener("click", () => {
+			for(const item of automaticHiddenCards) {
+				if(item.hidden) continue;
+				item.hidden = true;
+				item.content.hidden = true;
+				item.toggle.textContent = "Show";
+				item.toggle.setAttribute("aria-expanded", "false");
+				try {
+					localStorage.setItem(item.hiddenKey, "1");
+				} catch(error) {
+					console.warn("Could not save candidate visibility preference.", error);
+				}
+			}
+			showAllAutomaticHidden = false;
+			updateAutomaticHiddenButton();
+		});
+
+		function renderYouTubeCandidate(candidate) {
+			const card = youtubeElement("div");
+			card.style.border = "1px solid var(--border-color, #666)";
+			card.style.borderRadius = "8px";
+			card.style.padding = "14px";
+			card.style.margin = "12px 0";
+
+			const title = youtubeElement("h3", candidate.title || "Untitled video");
+			card.appendChild(title);
+
+			if(candidate.thumbnail) {
+				const image = document.createElement("img");
+				image.src = candidate.thumbnail;
+				image.alt = "YouTube thumbnail";
+				image.loading = "lazy";
+				image.style.maxWidth = "240px";
+				image.style.width = "100%";
+				card.appendChild(image);
+			}
+
+			const details = [
+				"Channel: " + (candidate.channelTitle || "Unknown"),
+				"Published: " + (candidate.publishedAt || "Unknown"),
+				"Search term: " + (candidate.searchTerm || "Unknown"),
+				"Video ID: " + candidate.id
+			];
+			card.appendChild(youtubeElement("p", details.join(" | ")));
+			const enrichment = candidate.enrichment || {};
+			const metadata = youtubeElement("div");
+			metadata.style.margin = "10px 0";
+			metadata.style.padding = "8px 10px";
+			metadata.style.borderLeft = "3px solid var(--border-color, #666)";
+			metadata.style.fontSize = "0.92em";
+
+			if(enrichment.status !== "available") {
+				metadata.appendChild(youtubeElement(
+					"p",
+					enrichment.status === "unavailable"
+						? "YouTube metadata: Unavailable"
+						: "YouTube metadata: Not retrieved yet"
+				));
+			} else {
+				const metadataDetails = [];
+
+				if(Number.isFinite(enrichment.durationSeconds)) {
+					const total = Math.floor(enrichment.durationSeconds);
+					const hours = Math.floor(total / 3600);
+					const minutes = Math.floor((total % 3600) / 60);
+					const seconds = total % 60;
+					const duration = hours
+						? hours + ":" + String(minutes).padStart(2, "0") +
+							":" + String(seconds).padStart(2, "0")
+						: minutes + ":" + String(seconds).padStart(2, "0");
+
+					metadataDetails.push("Duration: " + duration);
+				}
+
+				metadataDetails.push(
+					"Captions: " + (enrichment.captionAvailable ? "Available" : "Not indicated")
+				);
+
+				if(enrichment.liveBroadcastContent === "live") {
+					metadataDetails.push("Status: Live");
+				} else if(enrichment.liveBroadcastContent === "upcoming") {
+					metadataDetails.push("Status: Upcoming livestream");
+				} else if(enrichment.actualStartTime) {
+					metadataDetails.push("Status: Recorded livestream");
+				} else {
+					metadataDetails.push("Status: Regular video");
+				}
+
+				if(enrichment.definition) {
+					metadataDetails.push(
+						"Quality: " + enrichment.definition.toUpperCase()
+					);
+				}
+
+				if(enrichment.dimension) {
+					metadataDetails.push(
+						"Video: " + enrichment.dimension.toUpperCase()
+					);
+				}
+
+				if(enrichment.defaultLanguage || enrichment.defaultAudioLanguage) {
+					metadataDetails.push(
+						"Language: " +
+						(enrichment.defaultLanguage || enrichment.defaultAudioLanguage)
+					);
+				}
+
+				metadata.appendChild(youtubeElement(
+					"p",
+					metadataDetails.join(" | ")
+				));
+
+				if(Array.isArray(enrichment.tags) && enrichment.tags.length) {
+					const visibleTags = enrichment.tags.slice(0, 15);
+					const tagText = visibleTags.join(", ") +
+						(enrichment.tags.length > visibleTags.length
+							? " (+" + (enrichment.tags.length - visibleTags.length) + " more)"
+							: "");
+
+					metadata.appendChild(youtubeElement(
+						"p",
+						"YouTube tags: " + tagText
+					));
+				}
+			}
+
+			card.appendChild(metadata);
+
+
+			const link = youtubeElement("a", "Watch on YouTube");
+		link.href = "https://www.youtube.com/watch?v=" + encodeURIComponent(candidate.id);
+			link.target = "_blank";
+			link.rel = "noopener noreferrer";
+			card.appendChild(link);
+
+			const dateSource = candidate.dateSource || "Unknown";
+			const confidence = candidate.dateConfidence || "none";
+			const tournamentTitle = candidate.tournamentTitle || "";
+
+			const dateDetails = youtubeElement(
+				"p",
+				"Date estimate: " + dateSource +
+				(confidence !== "none" ? " (" + confidence + " confidence)" : "") +
+				(tournamentTitle ? " | Tournament: " + tournamentTitle : "")
+			);
+			card.appendChild(dateDetails);
+
+			if(candidate.challongeUrl) {
+				const challongeLink = youtubeElement("a", "View Challonge event");
+				challongeLink.href = candidate.challongeUrl;
+				challongeLink.target = "_blank";
+				challongeLink.rel = "noopener noreferrer";
+				card.appendChild(challongeLink);
+			}
+
+			const date = youtubeField(
+				card, "Actual match date (review and correct)", "date",
+				candidate.estimatedDate || "",
+				true
+			);
+			const tags = youtubeField(
+				card, "Tags (Tournament|Region|Version)", "text",
+				candidate.suggestedTags ||
+					[String(candidate.tournamentTitle || "Unknown"), "Unknown", "Unknown"].join("|")
+			);
+			const netplay = youtubeField(card, "Type", "select", [
+				["N", "Netplay"],
+				["L", "Locals"]
+			], true);
+			netplay.value = "N";
+			const netcode = youtubeField(card, "Netcode", "select", [
+				["D", "Delay-based"],
+				["R", "Rollback"]
+			], true);
+
+			const candidateChanges = {
+				date: false,
+				tags: false,
+				netplay: false,
+				netcode: false
+			};
+			date.addEventListener("change", () => {
+				candidateChanges.date = true;
+
+				if(candidateChanges.tags) return;
+
+				function versionForDate(value) {
+					if(!/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+						return "Unknown";
+					}
+
+					const parsed = new Date(value + "T00:00:00Z");
+					if(!Number.isFinite(parsed.getTime()) ||
+						parsed.toISOString().slice(0, 10) !== value) {
+						return "Unknown";
+					}
+
+					if(value < "2020-12-20") return "Unknown";
+					if(value < "2021-08-12") return "1.3";
+					if(value < "2021-08-18") return "1.3.1";
+					if(value < "2022-02-14") return "1.3.1.1";
+					if(value < "2025-05-09") return "1.3.1.2";
+					return "1.4";
+				}
+
+				const fields = tags.value.split("|");
+				while(fields.length < 3) fields.push("Unknown");
+				fields[2] = versionForDate(date.value);
+				tags.value = fields.slice(0, 3).join("|");
+			});
+			tags.addEventListener("input", () => candidateChanges.tags = true);
+			netplay.addEventListener("change", () => candidateChanges.netplay = true);
+			netcode.addEventListener("change", () => candidateChanges.netcode = true);
+
+			const actions = youtubeElement("div");
+			actions.style.marginTop = "10px";
+
+			const openEditor = youtubeElement("button", "Open in Editor", "ms-info");
+			openEditor.type = "button";
+			openEditor.style.marginRight = "8px";
+			openEditor.addEventListener("click", () => {
+				const params = new URLSearchParams({
+					videoId: candidate.id,
+					candidateDate: date.value,
+					candidateTags: tags.value,
+					candidateNetplay: netplay.value,
+					candidateNetcode: netcode.value,
+					candidateDateChanged: candidateChanges.date ? "1" : "0",
+					candidateTagsChanged: candidateChanges.tags ? "1" : "0",
+					candidateNetplayChanged: candidateChanges.netplay ? "1" : "0",
+					candidateNetcodeChanged: candidateChanges.netcode ? "1" : "0",
+					candidateTitle: candidate.title || ""
+				});
+				window.location.href = "/editor?" + params.toString();
+			});
+			actions.appendChild(openEditor);
+
+
+			const reject = youtubeElement("button", "Reject", "ms-danger");
+			reject.type = "button";
+			reject.style.marginLeft = "8px";
+			reject.addEventListener("click", async () => {
+				if(!confirm("Remove this discovery candidate?")) return;
+				reject.disabled = true;
+				try {
+					await youtubeRequest("/youtubeDiscoveryReject", {
+						method: "POST",
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify({ vid: candidate.id })
+					});
+					await loadYouTubeCandidates();
+				} catch(error) {
+					alert(error.message);
+					reject.disabled = false;
+				}
+			});
+			actions.appendChild(reject);
+			const content = youtubeElement("div");
+			while(card.firstChild) {
+				content.appendChild(card.firstChild);
+			}
+
+			const hiddenKey = "ssf2.vods:hidden-candidate:" + String(candidate.id);
+			const legacyHiddenKey = "ssf2.vods:hidden-automatic:" + String(candidate.id);
+			let hidden = false;
+
+			try {
+				hidden = localStorage.getItem(hiddenKey) === "1" ||
+					localStorage.getItem(legacyHiddenKey) === "1";
+			} catch(error) {
+				console.warn("Could not read candidate visibility preference.", error);
+			}
+
+			const contentId = "automatic-content-" + String(candidate.id).replace(/[^a-zA-Z0-9_-]/g, "-");
+			content.id = contentId;
+
+			const visibility = { content, hidden, hiddenKey, toggle: null };
+			content.hidden = hidden && !showAllAutomaticHidden;
+
+			const toggle = youtubeElement("button", hidden ? "Show" : "Hide");
+			toggle.type = "button";
+			toggle.setAttribute("aria-controls", contentId);
+			toggle.setAttribute("aria-expanded", String(!hidden));
+			toggle.style.marginLeft = "8px";
+			visibility.toggle = toggle;
+			automaticHiddenCards.push(visibility);
+
+			toggle.addEventListener("click", () => {
+				visibility.hidden = !visibility.hidden;
+				toggle.textContent = visibility.hidden ? "Show" : "Hide";
+				toggle.setAttribute("aria-expanded", String(!visibility.hidden));
+				content.hidden = visibility.hidden;
+
+				try {
+					if(visibility.hidden) {
+						localStorage.setItem(hiddenKey, "1");
+					} else {
+						localStorage.removeItem(hiddenKey);
+						localStorage.removeItem(legacyHiddenKey);
+					}
+				} catch(error) {
+					console.warn("Could not save candidate visibility preference.", error);
+				}
+
+				updateAutomaticHiddenButton();
+			});
+
+			actions.appendChild(toggle);
+
+			card.appendChild(content);
+			card.appendChild(actions);
+			return card;
+		}
+
+		async function loadYouTubeCandidates() {
+			const automatic = document.getElementById("youtube-automatic");
+			const review = document.getElementById("youtube-review");
+			const status = document.getElementById("youtube-discovery-status");
+
+			try {
+				const data = await youtubeRequest("/youtubeDiscoveryCandidates");
+				automatic.replaceChildren();
+				review.replaceChildren();
+
+				if(!data.configured) {
+					status.textContent = " YouTube API key is not configured.";
+				} else {
+					status.textContent = data.scanning ? " A scan is running." : "";
+				}
+
+				const candidates = data.candidates || [];
+				const automaticItems = candidates.filter(item => item.status === "automatic");
+				const reviewItems = candidates.filter(item => item.status === "review");
+				automaticHiddenCards = [];
+
+				for(const candidate of automaticItems) {
+					automatic.appendChild(renderYouTubeCandidate(candidate, true));
+				}
+				for(const candidate of reviewItems) {
+					review.appendChild(renderYouTubeCandidate(candidate));
+				}
+				updateAutomaticHiddenButton();
+
+				if(!automaticItems.length) {
+					automatic.appendChild(youtubeElement("p", "No automatic candidates."));
+				}
+				if(!reviewItems.length) {
+					review.appendChild(youtubeElement("p", "No candidates need review."));
+				}
+			} catch(error) {
+				status.textContent = " Could not load discovery candidates: " + error.message;
+				automatic.textContent = "Could not load candidates.";
+				review.textContent = "Could not load candidates.";
+			}
+		}
+
+		async function resetYouTubeDiscovery() {
+			if(!confirm(
+				"Clear all automatic YouTube discovery candidates and reset both scan cursors? " +
+				"This will not delete approved matches, user-submitted provisional videos, " +
+				"player lists, or the Challonge cache."
+			)) return;
+
+			const status = document.getElementById("youtube-discovery-status");
+			const button = document.getElementById("youtube-discovery-reset");
+			button.disabled = true;
+			status.textContent = " Resetting discovery database...";
+
+			try {
+				await youtubeRequest("/youtubeDiscoveryReset", {
+					method: "POST"
+				});
+				status.textContent = " Discovery candidates cleared and scan cursors reset.";
+				await loadYouTubeCandidates();
+			} catch(error) {
+				status.textContent = " Reset failed: " + error.message;
+			} finally {
+				button.disabled = false;
+			}
+		}
+
+		async function scanYouTubeCandidates() {
+			const status = document.getElementById("youtube-discovery-status");
+			status.textContent = " Starting scan...";
+			try {
+				const result = await youtubeRequest("/youtubeDiscoveryScan", {
+					method: "POST"
+				});
+				status.textContent = result && result.skipped
+					? " " + result.reason
+					: " Scan complete. Checked " + result.resultsChecked +
+						" results; " + result.automatic + " automatic and " +
+						result.review + " need review.";
+				await loadYouTubeCandidates();
+			} catch(error) {
+				status.textContent = " Scan failed: " + error.message;
+			}
+		}
+
+		loadYouTubeCandidates();
+
 	</script>
 </html>

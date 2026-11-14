@@ -64,8 +64,12 @@ MatchManger.prototype.validateAddEditVideoForm = function(form) {
 };
 
 MatchManger.prototype.editVideo = function(form, ip, auth) {
+	const rawTags = form && typeof form.tags === "string" ? form.tags : "";
 	let error = this.validateAddEditVideoForm(form);
 	if(error) return error;
+
+	// Preserve empty semantic tag positions for video metadata.
+	form.tags = rawTags === "" ? [] : rawTags.split("|").map(tag => tag.trim());
 
 	let videoData = this.server.games[form.vid] || {};
 	if(Object.keys(videoData).length === 0) {

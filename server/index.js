@@ -6,6 +6,7 @@ const SearchManager = require("./searchManager.js");
 const MatchManager = require("./matchManager.js");
 const Logger = require("./logger.js");
 const charIdMap = require("./charIdMap.js");
+const YouTubeDiscoveryManager = require("./youtubeDiscoveryManager.js");
 
 function Server(cfg, app) {
 	this.charMap = charIdMap;
@@ -17,9 +18,15 @@ function Server(cfg, app) {
 	this.statisticsManager = new StatisticsManager(this);
 	this.matchManager = new MatchManager(this);
 	this.logger = new Logger(this.cfg);
+	this.youtubeDiscoveryManager = new YouTubeDiscoveryManager(this);
 }
 Server.prototype.initialize = async function() {
 	this.games = await this.videoDataManager.loadJSON();
+	try {
+		await this.youtubeDiscoveryManager.load();
+	} catch(error) {
+		this.logger.log("YouTube discovery could not load: " + error.message, null, "YouTube discovery");
+	}
 	this.setupRoutes();
 };
 Server.prototype.getRandomCharId = function() {
@@ -115,6 +122,174 @@ Server.prototype.setupRoutes = function() {
 			return res.status(403).send("No!");
 		}
 		res.send(this.templateManager.renderTemplate("provisional.html"));
+	});
+
+
+	this.app.get("/youtubeDiscoveryCandidates", async (req, res) => {
+		let auth = this.authCheck(req);
+		if(!auth || !this.approveCheck(auth, req)) {
+			return res.status(403).send("No!");
+		}
+
+		const candidates = Object.values(this.youtubeDiscoveryManager.candidates)
+			.filter(candidate => !this.games[candidate.id])
+			.map(candidate => ({
+				...candidate,
+				suggestedTags: this.youtubeDiscoveryManager.suggestTags(candidate)
+			}));
+
+		res.json({
+			candidates,
+			configured: this.youtubeDiscoveryManager.apiKeys.length > 0,
+			scanning: this.youtubeDiscoveryManager.scanning
+		});
+	});
+
+	this.app.post("/youtubeDiscoveryReset", async (req, res) => {
+		let auth = this.authCheck(req);
+		if(!auth || !this.approveCheck(auth, req)) {
+			return res.status(403).send("No!");
+		}
+
+		try {
+			const result = await this.youtubeDiscoveryManager.resetDiscovery();
+			this.logger.log(
+				"Reset YouTube discovery candidates and scan cursors.",
+				req.connection.remoteAddress,
+				auth
+			);
+			res.json(result);
+		} catch(error) {
+			const status = error.message === "A discovery scan is currently running."
+				? 409
+				: 500;
+			this.logger.log(
+				"YouTube discovery reset failed: " + error.message,
+				req.connection.remoteAddress,
+				auth
+			);
+			res.status(status).send(error.message);
+		}
+	});
+
+	this.app.post("/youtubeDiscoveryScan", async (req, res) => {
+		let auth = this.authCheck(req);
+		if(!auth || !this.approveCheck(auth, req)) {
+			return res.status(403).send("No!");
+		}
+
+		try {
+			const summary = await this.youtubeDiscoveryManager.scan();
+			res.json(summary);
+		} catch(error) {
+			this.logger.log("Manual YouTube discovery scan failed: " + error.message, req.connection.remoteAddress, auth);
+			res.status(502).send("YouTube discovery scan failed: " + error.message);
+		}
+	});
+
+	this.app.post("/youtubeDiscoveryPromote", async (req, res) => {
+		let auth = this.authCheck(req);
+		if(!auth || !this.approveCheck(auth, req)) {
+			return res.status(403).send("No!");
+		}
+
+		const form = req.body || {};
+		const vid = form.vid;
+
+		if(typeof vid !== "string" || !/^[A-Za-z0-9_-]{11}$/.test(vid)) {
+			return res.status(400).send("Invalid YouTube video ID.");
+		}
+
+		const candidate = this.youtubeDiscoveryManager.candidates[vid];
+		if(!candidate) return res.status(404).send("Discovery candidate not found.");
+		if(this.games[vid]) return res.status(409).send("This video is already in the replay database.");
+
+		if(typeof form.date !== "string" ||
+			!/^\d{4}-\d{2}-\d{2}$/.test(form.date) ||
+			!Number.isFinite(Date.parse(form.date)) ||
+			new Date(form.date).toISOString().slice(0, 10) !== form.date) {
+			return res.status(400).send("Enter a valid video date in YYYY-MM-DD format.");
+		}
+
+		if(form.netplay !== "L" && form.netplay !== "N") {
+			return res.status(400).send("Select Locals or Netplay.");
+		}
+
+		if(form.netcode !== "D" && form.netcode !== "R") {
+			return res.status(400).send("Select Delay-based or Rollback netcode.");
+		}
+
+		let tags;
+		if(Array.isArray(form.tags)) {
+			tags = form.tags;
+		} else if(typeof form.tags === "string") {
+			tags = form.tags.replace(/\|+/g, "|").split("|");
+		} else {
+			tags = [];
+		}
+
+		tags = tags.map(tag => String(tag).trim()).filter(Boolean);
+		if(tags.some(tag => /[\t\r\n]/.test(tag))) {
+			return res.status(400).send("Tags cannot contain tabs or line breaks.");
+		}
+
+		this.games[vid] = {
+			id: vid,
+			date: form.date,
+			netplay: form.netplay,
+			tags,
+			netcode: form.netcode,
+			provIP: null,
+			matches: []
+		};
+
+		try {
+			await this.videoDataManager.saveData(this.games);
+		} catch(error) {
+			delete this.games[vid];
+			this.logger.log("YouTube candidate promotion failed for " + vid + ": " + error.message, req.connection.remoteAddress, auth);
+			return res.status(500).send("Could not save the promoted video.");
+		}
+
+		delete this.youtubeDiscoveryManager.candidates[vid];
+
+		let candidateCleanupFailed = false;
+		try {
+			await this.youtubeDiscoveryManager.save();
+		} catch(error) {
+			this.youtubeDiscoveryManager.candidates[vid] = candidate;
+			candidateCleanupFailed = true;
+			this.logger.log("Promoted video " + vid + " but candidate cleanup failed: " + error.message, req.connection.remoteAddress, auth);
+		}
+
+		this.logger.log("Promoted YouTube discovery candidate: " + vid, req.connection.remoteAddress, auth);
+		res.json({ promoted: true, candidateCleanupFailed });
+	});
+
+	this.app.post("/youtubeDiscoveryReject", async (req, res) => {
+		let auth = this.authCheck(req);
+		if(!auth || !this.approveCheck(auth, req)) {
+			return res.status(403).send("No!");
+		}
+
+		const vid = req.body && req.body.vid;
+		if(typeof vid !== "string" || !this.youtubeDiscoveryManager.candidates[vid]) {
+			return res.status(404).send("Discovery candidate not found.");
+		}
+
+		const candidate = this.youtubeDiscoveryManager.candidates[vid];
+		delete this.youtubeDiscoveryManager.candidates[vid];
+
+		try {
+			await this.youtubeDiscoveryManager.save();
+		} catch(error) {
+			this.youtubeDiscoveryManager.candidates[vid] = candidate;
+			this.logger.log("Could not reject YouTube candidate " + vid + ": " + error.message, req.connection.remoteAddress, auth);
+			return res.status(500).send("Could not save the rejection.");
+		}
+
+		this.logger.log("Rejected YouTube discovery candidate: " + vid, req.connection.remoteAddress, auth);
+		res.sendStatus(200);
 	});
 
 	this.app.post("/approveVideo", async (req, res) => {

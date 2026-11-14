@@ -130,9 +130,9 @@ VideoDataManager.prototype.serializeData = function(json) {
         let data = json[vid];
         str += `${vid}\t${data.date}\t${data.netplay}\t${data.tags.map(t => t.trim()).join("|")}\t${data.provIP || ""}\t${data.netcode || ""}\n`;
 
-        data.matches.sort((a, b) => a.time - b.time);
+        const matches = [...data.matches].sort((a, b) => a.time - b.time);
 
-        data.matches.forEach(m => {
+        matches.forEach(m => {
             str += `${m.time}\t${m.p1char}\t${m.p1name}\t`;
             str += `${m.p2char}\t${m.p2name}\t${m.winner}\n`;
         });
@@ -146,7 +146,19 @@ VideoDataManager.prototype.saveData = async function(json) {
         await database.saveMatchData(json);
     } else {
         const data = this.serializeData(json);
-        fs.writeFileSync(this.filename, data);
+        const tempFilename = this.filename + "." + process.pid + "." + Date.now() + ".tmp";
+        try {
+            const mode = fs.statSync(this.filename).mode;
+            fs.writeFileSync(tempFilename, data, { flag: "wx", mode });
+            fs.renameSync(tempFilename, this.filename);
+        } catch(error) {
+            try {
+                if(fs.existsSync(tempFilename)) fs.unlinkSync(tempFilename);
+            } catch(cleanupError) {
+                error.cleanupError = cleanupError;
+            }
+            throw error;
+        }
     }
 };
 

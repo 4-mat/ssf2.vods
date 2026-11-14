@@ -297,4 +297,29 @@ async function saveMatchData(data) {
     }
 }
 
-module.exports = { initialize, loadMatchData, saveMatchData };
+
+async function loadAppData(key, fallback = null) {
+    const result = await pool.query(
+        "SELECT value FROM app_data WHERE key = $1",
+        [key]
+    );
+
+    if(result.rows.length === 0) return fallback;
+
+    try {
+        return JSON.parse(result.rows[0].value);
+    } catch(error) {
+        throw new Error("Stored app data is invalid JSON for key: " + key);
+    }
+}
+
+async function saveAppData(key, value) {
+    await pool.query(
+        `INSERT INTO app_data (key, value)
+         VALUES ($1, $2)
+         ON CONFLICT (key) DO UPDATE SET value = EXCLUDED.value`,
+        [key, JSON.stringify(value)]
+    );
+}
+
+module.exports = { initialize, loadMatchData, saveMatchData, loadAppData, saveAppData };

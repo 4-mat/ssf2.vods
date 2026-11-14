@@ -10,3 +10,9 @@ data/log-*.data
 
 # Installed dependencies
 node_modules/
+data/youtube-discovery.json
+
+data/youtube-discovery-state.json
+.env
+data/youtube-discovery-players.json
+data/youtube-discovery-challonge-cache.json

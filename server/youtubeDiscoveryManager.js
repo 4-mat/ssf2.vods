@@ -102,10 +102,15 @@ YouTubeDiscoveryManager.prototype.load = async function() {
 		this.rotation = { cursor: 0 };
 	}
 
-	// Date processing has its own cursor; player rotation remains independent.
+	// Date processing has independent cursors for recent and older uploads.
 	if(!Number.isInteger(this.rotation.dateCursor) ||
 		this.rotation.dateCursor < 0) {
 		this.rotation.dateCursor = 0;
+	}
+
+	if(!Number.isInteger(this.rotation.date2026Cursor) ||
+		this.rotation.date2026Cursor < 0) {
+		this.rotation.date2026Cursor = 0;
 	}
 
 	if(!fs.existsSync(this.seedsFilename)) {
@@ -223,7 +228,8 @@ YouTubeDiscoveryManager.prototype.resetDiscovery = async function() {
 		this.rotation = {
 			...this.rotation,
 			cursor: 0,
-			dateCursor: 0
+			dateCursor: 0,
+			date2026Cursor: 0
 		};
 
 		await this.save();
@@ -1372,28 +1378,80 @@ YouTubeDiscoveryManager.prototype.scan = async function() {
 			await this.saveRotation();
 		}
 
-		// Process a bounded rotating batch so candidates deferred by the
-		// three-search limit get another opportunity on subsequent scans.
-		const dateCandidateIds = Object.keys(this.candidates);
-		if(dateCandidateIds.length) {
-			const dateStart = this.rotation.dateCursor % dateCandidateIds.length;
-			const dateCount = Math.min(
-				DEFAULT_DATE_BATCH_SIZE,
-				dateCandidateIds.length - dateStart
-			);
+		// Prioritize 2026 uploads while preserving rotation for older uploads.
+		// YouTube upload dates determine priority only, never the actual match date.
+		const recentDateCandidateIds = [];
+		const olderDateCandidateIds = [];
 
-			let dateProcessedCount = 0;
+		for(const id of Object.keys(this.candidates)) {
+			const candidate = this.candidates[id];
+			const publishedAt = candidate && candidate.publishedAt;
+			const publishedTimestamp = typeof publishedAt === "string" &&
+				/^2026-\d{2}-\d{2}T/.test(publishedAt)
+				? Date.parse(publishedAt)
+				: NaN;
 
-			for(let offset = 0; offset < dateCount; offset++) {
-				const id = dateCandidateIds[
-					(dateStart + offset) % dateCandidateIds.length
-				];
-				dateProcessedCount = offset + 1;
+			if(Number.isFinite(publishedTimestamp) &&
+				new Date(publishedTimestamp).getUTCFullYear() === 2026) {
+				recentDateCandidateIds.push(id);
+			} else {
+				olderDateCandidateIds.push(id);
+			}
+		}
 
-				const candidate = this.candidates[id];
+		if(recentDateCandidateIds.length || olderDateCandidateIds.length) {
+			const recentStart = recentDateCandidateIds.length
+				? this.rotation.date2026Cursor % recentDateCandidateIds.length
+				: 0;
+			const olderStart = olderDateCandidateIds.length
+				? this.rotation.dateCursor % olderDateCandidateIds.length
+				: 0;
+
+			// Interleave two 2026 uploads for every older upload.
+			// If one group runs out, fill the remaining slots from the other.
+			const dateQueue = [];
+			let recentOffset = 0;
+			let olderOffset = 0;
+
+			while(dateQueue.length < DEFAULT_DATE_BATCH_SIZE &&
+				(recentOffset < recentDateCandidateIds.length ||
+				olderOffset < olderDateCandidateIds.length)) {
+
+				const hasRecent = recentOffset < recentDateCandidateIds.length;
+				const hasOlder = olderOffset < olderDateCandidateIds.length;
+				const preferOlder = dateQueue.length % 3 === 2;
+				const useOlder = hasOlder && (!hasRecent || preferOlder);
+
+				if(useOlder) {
+					dateQueue.push({
+						id: olderDateCandidateIds[
+							(olderStart + olderOffset) % olderDateCandidateIds.length
+						],
+						priority: "older"
+					});
+					olderOffset++;
+				} else {
+					dateQueue.push({
+						id: recentDateCandidateIds[
+							(recentStart + recentOffset) % recentDateCandidateIds.length
+						],
+						priority: "2026"
+					});
+					recentOffset++;
+				}
+			}
+
+			let recentProcessedCount = 0;
+			let olderProcessedCount = 0;
+
+			for(const entry of dateQueue) {
+				const candidate = this.candidates[entry.id];
 				if(!candidate) continue;
 
 				await this.estimateCandidateDate(candidate, dateLookupState);
+
+				if(entry.priority === "2026") recentProcessedCount++;
+				else olderProcessedCount++;
 
 				if(candidate.dateSource === "Challonge") summary.challongeMatches =
 					(summary.challongeMatches || 0) + 1;
@@ -1403,13 +1461,18 @@ YouTubeDiscoveryManager.prototype.scan = async function() {
 
 				summary.datesEstimated = (summary.datesEstimated || 0) + 1;
 
-				// Stop at the lookup limit so the next scan resumes with
-				// candidates that have not yet received a Challonge lookup.
+				// Keep the existing maximum of three Challonge searches per scan.
 				if(dateLookupState.searches >= 3) break;
 			}
 
-			this.rotation.dateCursor =
-				(dateStart + dateProcessedCount) % dateCandidateIds.length;
+			this.rotation.date2026Cursor = recentDateCandidateIds.length
+				? (recentStart + recentProcessedCount) % recentDateCandidateIds.length
+				: 0;
+
+			this.rotation.dateCursor = olderDateCandidateIds.length
+				? (olderStart + olderProcessedCount) % olderDateCandidateIds.length
+				: 0;
+
 			await this.saveRotation();
 			candidatesChanged = true;
 		}
